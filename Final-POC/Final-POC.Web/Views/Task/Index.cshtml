@@ -1,0 +1,626 @@
+﻿@model IList<Final_POC.Core.DTOs.TaskListDto>
+@using System.Security.Claims
+@{
+    ViewData["Title"] = "Tasks";
+}
+@await Html.PartialAsync("Navbar")
+<section class="main">
+
+    <!-- Create new Update Status Drawer -->
+    <div id="drawerUpdateStatus" class="drawer">
+
+        <div class="overlay" style="display: none;">
+        </div>
+
+        <div class="drawer-inner">
+
+            <div class="drawer-title">
+                <a title="back" onclick="Common.closeDrawer('#drawerUpdateStatus')">
+                    <i class="nt-angle-prev"></i>
+                </a>
+                <h1>
+                    Update Task Status
+                </h1>
+            </div>
+
+            <form id="formUpdateStatus" class="drawer-form">
+
+                <div class="row">
+
+                    <div class="form-title">
+                        Update status for <span id="updateStatusTaskTitle">Task Title</span>
+                    </div>
+
+                    <input type="hidden" id="hdnStatusTaskId">
+
+                    <div class="col-lg-12 mt-3">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input status-radio" type="radio" name="taskStatus" id="statusTodo" value="Todo">
+                            <label class="form-check-label" for="statusTodo">Todo</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input status-radio" type="radio" name="taskStatus" id="statusInProgress" value="InProgress">
+                            <label class="form-check-label" for="statusInProgress">In Progress</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input status-radio" type="radio" name="taskStatus" id="statusDone" value="Done">
+                            <label class="form-check-label" for="statusDone">Done</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="invite-botttom">
+
+                    <a class="cancel" onclick="Common.closeDrawer('#drawerUpdateStatus')">
+                        <i class="nt-backward"></i>
+                        Cancel
+                    </a>
+
+                    <div class="invite">
+                        <button id="btnUpdateStatus" type="submit" class="btn-invite">
+                            Update Status
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Add Task Drawer -->
+    <div id="drawerAddTask" class="drawer">
+
+        <div class="overlay" style="display: none;">
+        </div>
+
+        <div class="drawer-inner">
+
+            <div class="drawer-title">
+                <a title="back" onclick="Common.closeDrawer('#drawerAddTask')">
+                    <i class="nt-angle-prev"></i>
+                </a>
+                <h1>
+                    Add Task
+                </h1>
+            </div>
+
+            <form id="formAddTask" class="drawer-form">
+
+                <div class="row">
+
+                    <div class="form-title">
+                        Please provide following information about Task.
+                    </div>
+
+                    <div class="col-lg-12 form-floating">
+                        <input id="txtTitle" type="text" class="form-control" placeholder="" value=""
+                        required>
+                        <label for="txtTitle" class="form-label">
+                            <span class="red">*</span>
+                            Title
+                        </label>
+                    </div>
+
+                    <div class="col-lg-12 form-floating">
+                        <textarea id="txtDescription" class="form-control" placeholder="" style="height: 100px;"></textarea>
+                        <label for="txtDescription" class="form-label">
+                            Description
+                        </label>
+                    </div>
+
+                    <div class="col-lg-12 form-floating">
+                        <select id="ddlAssignedTo" class="form-control" placeholder="">
+                            <option value="">-- Select User --</option>
+                            <!-- Will be populated via JavaScript -->
+                        </select>
+                        <label for="ddlAssignedTo" class="form-label">
+                            Assigned To
+                        </label>
+                    </div>
+
+                    <input type="hidden" id="hdnCreatedById" value="@User.FindFirstValue(ClaimTypes.NameIdentifier)">
+
+                </div>
+
+                <div class="invite-botttom">
+
+                    <a class="cancel" onclick="Common.closeDrawer('#drawerAddTask')">
+                        <i class="nt-backward"></i>
+                        Cancel
+                    </a>
+
+                    <div class="invite">
+                        <button id="btnSaveTask" type="submit" class="btn-invite">
+                            Save
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Edit Task Drawer -->
+    <div id="drawerEditTask" class="drawer">
+
+        <div class="overlay" style="display: none;">
+        </div>
+
+        <div class="drawer-inner">
+
+            <div class="drawer-title">
+                <a title="back" onclick="Common.closeDrawer('#drawerEditTask')">
+                    <i class="nt-angle-prev"></i>
+                </a>
+                <h1>
+                    Edit Task
+                </h1>
+            </div>
+
+            <form id="formEditTask" class="drawer-form">
+
+                <div class="row">
+
+                    <div class="form-title">
+                        Please update the following information.
+                    </div>
+
+                    <input id="hdnTaskId" type="hidden" value="">
+
+                    <div class="col-lg-12 form-floating">
+                        <input id="txtEditTitle" type="text" class="form-control" placeholder="" value=""
+                        required>
+                        <label for="txtEditTitle" class="form-label">
+                            <span class="red">*</span>
+                            Title
+                        </label>
+                    </div>
+
+                    <div class="col-lg-12 form-floating">
+                        <textarea id="txtEditDescription" class="form-control" placeholder="" style="height: 100px;"></textarea>
+                        <label for="txtEditDescription" class="form-label">
+                            Description
+                        </label>
+                    </div>
+
+                    <div class="col-lg-12 form-floating">
+                        <select id="ddlEditAssignedTo" class="form-control" placeholder="">
+                            <option value="">-- Select User --</option>
+                            <!-- Will be populated via JavaScript -->
+                        </select>
+                        <label for="ddlEditAssignedTo" class="form-label">
+                            Assigned To
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="invite-botttom">
+
+                    <a class="cancel" onclick="Common.closeDrawer('#drawerEditTask')">
+                        <i class="nt-backward"></i>
+                        Cancel
+                    </a>
+
+                    <div class="invite">
+                        <button id="btnUpdateTask" type="submit" class="btn-invite">
+                            Update
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- view task drawer -->
+    <div id="drawerViewTask" class="drawer">
+
+        <div class="overlay" style="display: none;">
+        </div>
+
+        <div class="drawer-inner">
+
+            <div class="drawer-title">
+                <a title="back" onclick="Common.closeDrawer('#drawerViewTask')">
+                    <i class="nt-angle-prev"></i>
+                </a>
+                <h1 id="viewTaskTitle">
+                    Task Title
+                </h1>
+            </div>
+
+            <form class="drawer-form view-drawer">
+
+                <div class="row">
+
+                    <div class="form-title">
+                        Task Information
+                    </div>
+
+                    <div class="col-lg-6 data-detail">
+                        <div class="data-label">
+                            Title
+                        </div>
+                        <div id="viewTitle" class="data-val">
+                            Task Title
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 data-detail">
+                        <div class="data-label">
+                            Status
+                        </div>
+                        <div id="viewStatus" class="data-val">
+                            Todo
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 data-detail">
+                        <div class="data-label">
+                            Created By
+                        </div>
+                        <div id="viewCreatedBy" class="data-val">
+                            User Name
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 data-detail">
+                        <div class="data-label">
+                            Created At
+                        </div>
+                        <div id="viewCreatedAt" class="data-val">
+                            01/01/2025
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 data-detail">
+                        <div class="data-label">
+                            Assigned To
+                        </div>
+                        <div id="viewAssignedTo" class="data-val">
+                            User Name
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 data-detail">
+                        <div class="data-label">
+                            Description
+                        </div>
+                        <div id="viewDescription" class="data-val">
+                            Task description will be displayed here.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="invite-botttom">
+
+                    <a class="cancel" onclick="Common.closeDrawer('#drawerViewTask')">
+                        <i class="nt-backward"></i>
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="alerts-main">
+
+            <!-- heading and filter and add task button -->
+            <div class="alerts-title">
+
+                <h1>
+                    Tasks (@Model.Count)
+                </h1>
+
+                <div class="alerts-icon">
+
+                    <ul>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>
+                                <div class="icon">
+
+                                    <i class="nt-filter" title="Filter"
+                                       onclick="Common.showFilter(this, '#divFilters')">
+                                    </i>
+
+                                    <div id="divFilters" class="filter-sorting">
+
+                                        <div class="filter-sorting-title">
+                                            <p>
+                                                Filters
+                                            </p>
+                                            <a title="close" class="close" onclick="Common.hideFilter('#divFilters')">
+                                                <span class="nt-close-o"></span>
+                                            </a>
+                                        </div>
+
+                                        <form id="formFilterTasks" class="mt-3">
+
+                                            <div class="row">
+
+                                                <div class="col-lg-12 form-floating">
+                                                    <input id="txtFilterTitle" type="text" class="form-control"
+                                                           placeholder="" value="">
+                                                    <label for="txtFilterTitle">
+                                                        Title
+                                                    </label>
+                                                </div>
+
+                                                <div class="col-lg-12 form-floating">
+                                                    <select id="ddlFilterStatus" class="form-control">
+                                                        <option value="">All</option>
+                                                        <option value="Todo">Todo</option>
+                                                        <option value="InProgress">In Progress</option>
+                                                        <option value="Done">Done</option>
+                                                    </select>
+                                                    <label for="ddlFilterStatus">
+                                                        Status
+                                                    </label>
+                                                </div>
+
+                                                <div class="col-lg-12 form-floating">
+                                                    <select id="ddlFilterAssignedTo" class="form-control">
+                                                        <option value="">All</option>
+                                                        <!-- Will be populated via JavaScript -->
+                                                    </select>
+                                                    <label for="ddlFilterAssignedTo">
+                                                        Assigned To
+                                                    </label>
+                                                </div>
+                                                
+                                                <div class="col-lg-12 form-floating">
+                                                    <input id="txtFilterCreatedAfter" type="date" class="form-control"
+                                                           placeholder="" value="">
+                                                    <label for="txtFilterCreatedAfter">
+                                                        Created After
+                                                    </label>
+                                                </div>
+                                                
+                                                <div class="col-lg-12 form-floating">
+                                                    <input id="txtFilterCreatedBefore" type="date" class="form-control"
+                                                           placeholder="" value="">
+                                                    <label for="txtFilterCreatedBefore">
+                                                        Created Before
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+
+                                        <div class="apply-botttom">
+
+                                            <a id="btnResetFilter" class="cancel">
+                                                <span class="nt-refresh"></span>
+                                                Reset
+                                            </a>
+
+                                            <a id="btnApplyFilter" class="btn-apply">
+                                                Apply Filter
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+                            
+                            <li>
+                                <div class="icon">
+
+                                    <i class="nt-sort" title="Sort" onclick="Common.showFilter(this, '#divSorting')">
+                                    </i>
+
+                                    <div id="divSorting" class="filter-sorting">
+
+                                        <div class="filter-sorting-title">
+                                            <p>
+                                                Sort by
+                                            </p>
+                                            <a title="close" class="close" onclick="Common.hideFilter('#divSorting')">
+                                                <span class="nt-close-o"></span>
+                                            </a>
+                                        </div>
+
+                                        <div class="form-tabs">
+
+                                            <ul id="sortOrder" class="ass-des">
+                                                <li id="sortAscending" class="active" data-order="asc">
+                                                    Ascending
+                                                </li>
+                                                <li id="sortDescending" data-order="desc">
+                                                    Descending
+                                                </li>
+                                            </ul>
+
+                                            <div class="form-check mb-3">
+                                                <input id="rbTitle" class="form-check-input" type="radio"
+                                                       name="sortListing" value="Title">
+                                                <label class="form-check-label" for="rbTitle">
+                                                    Title
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check mb-3">
+                                                <input id="rbCreatedAt" class="form-check-input" type="radio"
+                                                       name="sortListing" value="CreatedAt" checked>
+                                                <label class="form-check-label" for="rbCreatedAt">
+                                                    Created Date
+                                                </label>
+                                            </div>
+
+                                            <div class="form-check mb-5">
+                                                <input id="rbStatus" class="form-check-input" type="radio"
+                                                       name="sortListing" value="Status">
+                                                <label class="form-check-label" for="rbStatus">
+                                                    Status
+                                                </label>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="apply-botttom">
+                                            <a id="btnResetSort" class="cancel">
+                                                <span class="nt-refresh"></span>
+                                                Reset
+                                            </a>
+                                            <a id="btnApplySort" class="btn-apply">
+                                                Apply Sort
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        }
+
+                        <li class="invite">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a title="Add Task" class="btn-invite"
+                                   onclick="Common.openDrawer('#drawerAddTask')">
+                                    Add Task
+                                </a>
+                            }
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- task list -->
+            <div class="alerts-content">
+                @foreach (var task in Model)
+                {
+                    <div class="alerts-content-single" data-id="@task.Id">
+
+                        <div class="alerts-content-inner">
+                            <div class="content-main">
+                                <div class="content-title">
+                                    <span>@task.Title</span>
+                                </div>
+                                <div class="content-desc">
+                                    @if (!string.IsNullOrEmpty(task.AssignedToName))
+                                    {
+                                        <small>Assigned to: @task.AssignedToName</small>
+                                    }
+                                    else
+                                    {
+                                        <small>Unassigned</small>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alerts-content-inner">
+                            <div class="content-main">
+                                <div class="content-desc">
+                                    Created by: @task.CreatedByName<br/>
+                                    @task.CreatedAt.ToString("MMM dd, yyyy")
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alerts-content-inner">
+                            <div class="content-main">
+                                <div class="content-last">
+                                    @{
+                                        string statusClass = task.Status switch
+                                        {
+                                            "Done" => "closed",
+                                            "InProgress" => "in-progress",
+                                            _ => "pending"
+                                        };
+                                        
+                                        string statusIcon = task.Status switch
+                                        {
+                                            "Done" => "nt-tick",
+                                            _ => "nt-clock"
+                                        };
+                                        
+                                        string displayStatus = task.Status switch
+                                        {
+                                            "InProgress" => "In Progress",
+                                            _ => task.Status
+                                        };
+                                    }
+                                    <span class="@statusClass btn-all-case">
+                                        <i class="@statusIcon"></i>
+                                        <span class="alert-text">
+                                            @displayStatus
+                                        </span>
+                                    </span>
+
+                                    <div class="edit-links">
+                                        <em class="nt-more"></em>
+                                        <div class="link-box">
+                                            <div class="link view-task" data-id="@task.Id">
+                                                <em class="nt-eye"></em>
+                                                View
+                                            </div>
+                                            @if (User.IsInRole("Admin") || (task.AssignedToId.HasValue && task.AssignedToId.Value.ToString() == User.FindFirstValue(ClaimTypes.NameIdentifier)))
+                                            {
+                                                <div class="link update-status" data-id="@task.Id" data-status="@task.Status">
+                                                    <em class="nt-edit"></em>
+                                                    Update Status
+                                                </div>
+                                            }
+                                            @if (User.IsInRole("Admin"))
+                                            {
+                                                <div class="link edit-task" data-id="@task.Id">
+                                                    <em class="nt-edit"></em>
+                                                    Edit
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- loading ui -->
+<div class="loading-wrapper">
+    <div class="loading-content">
+    </div>
+    <div class="loading-text position-absolute">
+        Loading...
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/tasks.js"></script>
+}

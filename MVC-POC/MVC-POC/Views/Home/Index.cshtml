@@ -1,0 +1,81 @@
+﻿@{
+    var isAdmin = ViewBag.IsAdmin ?? false;
+}
+
+@await Html.PartialAsync("Navbar")
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>User List</h3>
+
+            @if (isAdmin)
+            {
+                <div class="mb-3">
+                    <label>Filter by Country:</label>
+                    <select id="countryFilter" class="form-control">
+                        <option value="">All</option>
+                        @foreach (var country in ViewBag.Countries)
+                        {
+                            <option value="@country">@country</option>
+                        }
+                    </select>
+                </div>
+            }
+
+            <div id="userListContainer">
+                <p>Loading users...</p> 
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div id="userDetailsContainer">
+                <h3>User Details</h3>
+                <div id="userDetails"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function loadUsers(country = "") {
+        $.ajax({
+            url: "/Home/GetUsers",
+            type: "GET",
+            data: { countryFilter: country },
+            success: function (data) {
+                $("#userListContainer").html(data);
+            },
+            error: function () {
+                $("#userListContainer").html("<p>Error loading users.</p>");
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        loadUsers(); 
+
+        $(document).on("click", ".user-link", function (e) {
+            e.preventDefault();
+            let email = $(this).closest("tr").data("email");
+            let country = $("#countryFilter").val();
+            $.ajax({
+                url: "/Home/GetUserDetails",
+                type: "GET",
+                data: { email: email, countryFilter: country},
+                success: function (data) {
+                    $("#userDetails").html(data);
+                },
+                error: function () {
+                    alert("Error fetching user details.");
+                }
+            });
+        });
+
+        $("#countryFilter").change(function () {
+            let country = $(this).val();
+            loadUsers(country);
+        });
+    });
+</script>

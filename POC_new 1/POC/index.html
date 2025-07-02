@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Safety Alerts</title>
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+	<section class="main">
+		<!-- Add Edit Project Drawer -->
+		<div id="drawerAddEditProject" class="drawer">
+
+			<div class="overlay" style="display: none;">
+			</div>
+
+			<div class="drawer-inner">
+
+				<div class="drawer-title">
+					<a title="back" onclick="Common.closeDrawer('#drawerAddEditProject')">
+						<i class="nt-angle-prev"></i>
+					</a>
+					<h1>
+						Add Project
+					</h1>
+				</div>
+
+				<form class="drawer-form">
+
+					<div class="row">
+
+						<div class="form-title">
+							Please provide following information about Project.
+						</div>
+
+						<div class="col-lg-6 form-floating">
+							<input id="txtProjectName" type="text" class="form-control" placeholder="" value=""
+								required>
+							<label for="txtProjectName" class="form-label">
+								<span class="red">*</span>
+								Project Name
+							</label>
+						</div>
+
+						<div class="col-lg-6 form-floating">
+							<input id="txtProjectCode" type="text" class="form-control" placeholder="" value=""
+								required>
+							<label for="txtProjectCode" class="form-label">
+								<span class="red">*</span>
+								Project Code
+							</label>
+						</div>
+
+						<div class="col-lg-6 form-floating">
+							<input id="txtSponsorName" type="text" class="form-control" placeholder="" value=""
+								required>
+							<label for="txtSponsorName" class="form-label">
+								<span class="red">*</span>
+								Sponsor Name
+							</label>
+						</div>
+
+						<div class="col-lg-6 form-floating">
+							<input id="txtCompanyName" type="text" class="form-control" placeholder="" value=""
+								required>
+							<label for="txtCompanyName" data-name="required" class="form-label">
+								<span class="red">*</span>
+								Company Name
+							</label>
+						</div>
+
+						<div class="col-lg-6 form-floating">
+							<select id="selectProjectStatus" class="form-control select2" placeholder>
+								<option value="">Please select</option>
+								<option value="1">Active</option>
+								<option value="2">Inactive</option>
+							</select>
+							<label for="selectProjectStatus" class="form-label">
+								<span class="red">*</span>
+								Status
+							</label>
+						</div>
+
+					</div>
+
+					<div class="invite-botttom">
+
+						<a class="cancel" onclick="Common.closeDrawer('#drawerAddEditProject')">
+							<i class="nt-backward"></i>
+							Cancel
+						</a>
+
+						<div class="invite">
+							<button id="btnSaveProject" type="submit" class="btn-invite">
+								Save
+							</button>
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+		<!-- view project drawer -->
+		<div id="drawerViewProject" class="drawer">
+
+			<div class="overlay" style="display: none;">
+			</div>
+
+			<div class="drawer-inner">
+
+				<div class="drawer-title">
+					<a title="back" onclick="Common.closeDrawer('#drawerViewProject')">
+						<i class="nt-angle-prev"></i>
+					</a>
+					<h1>
+						Project ABC
+					</h1>
+				</div>
+
+				<form class="drawer-form view-drawer">
+
+					<div class="row">
+
+						<div class="form-title">
+							Project Summary
+						</div>
+
+						<div class="col-lg-6 data-detail">
+							<div class="data-label">
+								Project Name
+							</div>
+							<div class="data-val">
+								Project ABC
+							</div>
+						</div>
+
+						<div class="col-lg-6 data-detail">
+							<div class="data-label">
+								Project Code
+							</div>
+							<div class="data-val">
+								ANZ001
+							</div>
+						</div>
+
+						<div class="col-lg-6 data-detail">
+							<div class="data-label">
+								Sponsor Name
+							</div>
+							<div class="data-val">
+								Abc Inc.
+							</div>
+						</div>
+
+						<div class="col-lg-6 data-detail">
+							<div class="data-label">
+								Company Name
+							</div>
+							<div class="data-val">
+								Xyz Inc.
+							</div>
+						</div>
+
+						<div class="col-lg-6 data-detail">
+							<div class="data-label">
+								Status
+							</div>
+							<div class="data-val">
+								Active
+							</div>
+						</div>
+
+					</div>
+
+					<div class="invite-botttom">
+
+						<a class="cancel" onclick="Common.closeDrawer('#drawerViewProject')">
+							<i class="nt-backward"></i>
+							Cancel
+						</a>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="alerts-main">
+
+				<!-- heading and filter and add project button -->
+				<div class="alerts-title">
+
+					<h1>
+						Projects (85)
+					</h1>
+
+					<div class="alerts-icon">
+
+						<ul>
+
+							<li>
+								<div class="icon">
+
+									<i class="nt-filter" title="Filter"
+										onclick="Common.showFilter(this, '#divFilters')">
+									</i>
+
+									<div id="divFilters" class="filter-sorting">
+
+										<div class="filter-sorting-title">
+											<p>
+												Filters
+											</p>
+											<a title="close" class="close" onclick="Common.hideFilter('#divFilters')">
+												<span class="nt-close-o"></span>
+											</a>
+										</div>
+
+										<form class="mt-3">
+
+											<div class="row">
+
+												<div class="col-lg-12 form-floating">
+													<input id="txtFilterProjectName" type="text" class="form-control"
+														placeholder="" value="">
+													<label for="txtFilterProjectName">
+														Project Name
+													</label>
+												</div>
+
+												<div class="col-lg-12 form-floating">
+													<input id="txtFilterProjectCode" type="text" class="form-control"
+														placeholder="" value="">
+													<label for="txtFilterProjectCode">
+														Project Code
+													</label>
+												</div>
+
+											</div>
+
+										</form>
+
+										<div class="apply-botttom">
+
+											<a class="cancel">
+												<span class="nt-refresh"></span>
+												Reset
+											</a>
+
+											<a class="btn-apply">
+												Apply Filter
+											</a>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</li>
+
+							<li>
+								<div class="icon">
+
+									<i class="nt-sort" title="Sort" onclick="Common.showFilter(this, '#divSorting')">
+									</i>
+
+									<div id="divSorting" class="filter-sorting">
+
+										<div class="filter-sorting-title">
+											<p>
+												Sort by
+											</p>
+											<a title="close" class="close" onclick="Common.hideFilter('#divSorting')">
+												<span class="nt-close-o"></span>
+											</a>
+										</div>
+
+										<div class="form-tabs">
+
+											<ul class="ass-des">
+												<li class="active">
+													Ascending
+												</li>
+												<li>
+													Desending
+												</li>
+											</ul>
+
+											<div class="form-check mb-3">
+												<input id="rbProjectName" class="form-check-input" type="radio"
+													name="sortListing">
+												<label class="form-check-label" for="rbProjectName">
+													Project Name
+												</label>
+											</div>
+
+											<div class="form-check mb-5">
+												<input id="rbProjectCode" class="form-check-input" type="radio"
+													name="sortListing">
+												<label class="form-check-label" for="rbProjectCode">
+													Project Code
+												</label>
+											</div>
+
+										</div>
+
+
+										<div class="apply-botttom">
+											<a class="cancel">
+												<span class="nt-refresh"></span>
+												Reset
+											</a>
+											<a title="invite" class="btn-apply">
+												Apply Sort
+											</a>
+										</div>
+
+									</div>
+									</a>
+
+							</li>
+
+							<li class="invite">
+								<a title="invite" class="btn-invite"
+									onclick="Common.openDrawer('#drawerAddEditProject')">
+									Add Project
+								</a>
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+				
+				<!-- project list -->
+				<div class="alerts-content">
+
+					<div class="alerts-content-single">
+
+						<div class="alerts-content-inner">
+							<div class="content-main">
+								<div class="content-title">
+									<span> Project Name</span><em class="nt-edit edit-name-btn" onclick="Common.ShowEditOption(this)"></em>
+									<div class="edit-name">
+										<div class="edit-box">
+											<input type="text" class="name-input">
+											<button class="secondary-btn" type="button"  onclick="Common.CloseEditOption(this)">Cancel</button>
+											<button class="btn-invite" type="button">Save</button>
+										</div>
+									</div>
+								</div>
+								<div class="content-desc">
+									Project Code
+								</div>
+							</div>
+						</div>
+
+						<div class="alerts-content-inner">
+							<div class="content-main">
+								<div class="content-desc">
+									Sponsor Name
+								</div>
+							</div>
+						</div>
+
+						<div class="alerts-content-inner">
+							<div class="content-main">
+								<div class="content-desc">
+									Company Name
+								</div>
+							</div>
+						</div>
+
+						<div class="alerts-content-inner">
+							<div class="content-main">
+								<div class="content-last">
+
+									<span class="closed btn-all-case">
+										<i class="nt-tick"></i>
+										<span class="alert-text">
+											Status
+										</span>
+									</span>
+
+									<div class="edit-links">
+										<em class="nt-more"></em>
+										<div class="link-box">
+											<div class="link" onclick="Common.openDrawer('#drawerViewProject')">
+												<em class="nt-eye"></em>
+												View
+											</div>
+											<div class="link" onclick="Common.openDrawer('#drawerAddEditProject')">
+												<em class="nt-edit"></em>
+												Edit
+											</div>
+											<div class="link">
+												<em class="nt-bin"></em>
+												Delete
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- loading ui -->
+	<div class="loading-wrapper">
+		<div class="loading-content">
+		</div>
+		<div class="loading-text position-absolute">
+			Loading...
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+
+</html>

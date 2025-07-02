@@ -1,0 +1,188 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@using System.Text.Json
+@using MVC_POC.Models
+
+@{
+    var userJson = HttpContextAccessor.HttpContext?.Session.GetString("User");
+    var user = !string.IsNullOrEmpty(userJson) ? JsonSerializer.Deserialize<User>(userJson) : null;
+    var isAdminUser = user?.Email == "admin@example.com";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary shadow-sm w-100">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold text-primary" href="/">MVC</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                @if (user != null)
+                {
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-link nav-link text-primary fw-semibold" id="profileBtn">
+                            Profile
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <form method="post" asp-controller="Auth" asp-action="Logout">
+                            <button type="submit" class="btn btn-link nav-link text-danger fw-semibold" style="border: none; background: none; cursor: pointer;">
+                                Logout
+                            </button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-primary fw-semibold" asp-controller="Auth" asp-action="Signin">Login</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="profileForm">
+                    <input type="hidden" id="profileEmail" value="@user?.Email" />
+
+                    <div class="mb-3">
+                        <label>Email:</label>
+                        <input type="text" class="form-control" value="@user?.Email" readonly />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>First Name:</label>
+                        <input type="text" class="form-control" id="profileFirstName" value="@user?.FirstName" @(isAdminUser ? "readonly" : "") />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Last Name:</label>
+                        <input type="text" class="form-control" id="profileLastName" value="@user?.LastName" @(isAdminUser ? "readonly" : "") />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Phone:</label>
+                        <input type="text" class="form-control" id="profilePhone" value="@user?.Phone" @(isAdminUser ? "readonly" : "") />
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Country:</label>
+                        <select class="form-control" id="countrySelect" @(isAdminUser ? "disabled" : "")>
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>State:</label>
+                        <select class="form-control" id="stateSelect" @(isAdminUser ? "disabled" : "")>
+                            <option value="">Select State</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Role:</label>
+                        <input type="text" class="form-control" value="@user?.Role" readonly />
+                    </div>
+
+                    @if (!isAdminUser)
+                    {
+                        <button type="button" id="updateProfileBtn" class="btn btn-primary">Update</button>
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        const countryStates = {
+            "United States": ["California", "New York", "Texas", "Florida", "Illinois"],
+            "United Kingdom": ["England", "Scotland", "Wales", "Northern Ireland"],
+            "India": ["Delhi", "Maharashtra", "Karnataka", "Tamil Nadu", "West Bengal"],
+            "Germany": ["Bavaria", "Berlin", "Hesse", "North Rhine-Westphalia", "Saxony"],
+            "Spain": ["Andalusia", "Catalonia", "Madrid", "Valencia", "Galicia"]
+        };
+
+
+        const currentCountry = "@user?.Country";
+        const currentState = "@user?.State";
+
+        const countrySelect = $("#countrySelect");
+        const stateSelect = $("#stateSelect");
+
+        Object.keys(countryStates).forEach(country => {
+            const option = $("<option></option>").attr("value", country).text(country);
+            if (country === currentCountry) {
+                option.prop("selected", true);
+            }
+            countrySelect.append(option);
+        });
+
+        function updateStates() {
+            stateSelect.empty().append('<option value="">Select State</option>');
+            const selectedCountry = countrySelect.val();
+
+            if (selectedCountry && countryStates[selectedCountry]) {
+                countryStates[selectedCountry].forEach(state => {
+                    const option = $("<option></option>").attr("value", state).text(state);
+                    if (state === currentState) {
+                        option.prop("selected", true);
+                    }
+                    stateSelect.append(option);
+                });
+            }
+        }
+
+        updateStates();
+
+        countrySelect.change(updateStates);
+
+        $("#updateProfileBtn").click(function () {
+            let updatedData = {
+                Email: $("#profileEmail").val(),
+                FirstName: $("#profileFirstName").val(),
+                LastName: $("#profileLastName").val(),
+                Phone: $("#profilePhone").val(),
+                Country: $("#countrySelect").val(),
+                State: $("#stateSelect").val(),
+            };
+
+            $.ajax({
+                url: "/Home/UpdateProfile",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(updatedData),
+                success: function (response) {
+                    alert(response.message);
+                    $("#profileModal").modal("hide");
+                },
+                error: function (xhr) {
+                    alert("Error: " + xhr.responseText);
+                }
+            });
+        });
+
+        $("#profileBtn").click(function () {
+            $("#profileModal").modal("show");
+        });
+    });
+</script>

@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|c:\\users\\kathanthakkar\\source\\repos\\dbpractice2\\dbpractice2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|solutionrelative:dbpractice2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|c:\\users\\kathanthakkar\\source\\repos\\dbpractice2\\dbpractice2\\models\\trainingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|solutionrelative:dbpractice2\\models\\trainingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|c:\\users\\kathanthakkar\\source\\repos\\dbpractice2\\dbpractice2\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|solutionrelative:dbpractice2\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|c:\\users\\kathanthakkar\\source\\repos\\dbpractice2\\dbpractice2\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|solutionrelative:dbpractice2\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|c:\\users\\kathanthakkar\\source\\repos\\dbpractice2\\dbpractice2\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9CC5595-4756-4B92-AE69-F4836AD1ABF9}|DBPractice2\\DBPractice2.csproj|solutionrelative:dbpractice2\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enrollment.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\Models\\Enrollment.cs",
+              "RelativeDocumentMoniker": "DBPractice2\\Models\\Enrollment.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\Models\\Enrollment.cs",
+              "RelativeToolTip": "DBPractice2\\Models\\Enrollment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:55:02.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "DBPractice2\\Models\\Department.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\Models\\Department.cs",
+              "RelativeToolTip": "DBPractice2\\Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:54:47.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "DBPractice2\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\Models\\Student.cs",
+              "RelativeToolTip": "DBPractice2\\Models\\Student.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:53:07.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrainingDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\Models\\TrainingDbContext.cs",
+              "RelativeDocumentMoniker": "DBPractice2\\Models\\TrainingDbContext.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\Models\\TrainingDbContext.cs",
+              "RelativeToolTip": "DBPractice2\\Models\\TrainingDbContext.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:52:15.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\appsettings.json",
+              "RelativeDocumentMoniker": "DBPractice2\\appsettings.json",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\DBPractice2\\DBPractice2\\appsettings.json",
+              "RelativeToolTip": "DBPractice2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-18T09:46:25.138Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

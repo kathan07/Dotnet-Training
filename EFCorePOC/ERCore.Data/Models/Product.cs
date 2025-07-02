@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EFCore.Data.Models
+{
+    public class Product
+    {
+        public int Id { get; set; }
+
+        [Required]
+        [StringLength(200)]
+        public string Name { get; set; } = null!;
+
+        [Required]
+        [Range(0, 1000000)]
+        public decimal Price { get; set; }
+
+        public int CategoryId { get; set; }
+
+        // Navigation Properties
+        public virtual Category Category { get; set; } = null!;
+
+        public virtual ICollection<OrderProduct> OrderProducts { get; set; } = new List<OrderProduct>();
+    }
+}

@@ -1,0 +1,17 @@
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\bin\Debug\net8.0\AuthPractice.Business.deps.json
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\bin\Debug\net8.0\AuthPractice.Business.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\bin\Debug\net8.0\AuthPractice.Business.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\bin\Debug\net8.0\AuthPractice.Core.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\bin\Debug\net8.0\AuthPractice.Data.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\bin\Debug\net8.0\AuthPractice.Core.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\bin\Debug\net8.0\AuthPractice.Data.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\AuthPractice.Business.csproj.AssemblyReference.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\AuthPractice.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\AuthPractice.Business.AssemblyInfoInputs.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\AuthPractice.Business.AssemblyInfo.cs
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\AuthPractice.Business.csproj.CoreCompileInputs.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\AuthPrac.5F748DBC.Up2Date
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\AuthPractice.Business.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\refint\AuthPractice.Business.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\AuthPractice.Business.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Business\obj\Debug\net8.0\ref\AuthPractice.Business.dll

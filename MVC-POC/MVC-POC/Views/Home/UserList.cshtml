@@ -1,0 +1,28 @@
+﻿@model List<MVC_POC.Models.UserViewModel>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped  table-bordered  table-responsive table-hover  ">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody id="userTable">
+            @foreach (var user in Model)
+            {
+                <tr data-email="@user.Email" class="user-row">
+                    <td>@user.SrNo</td>
+                    <td><a href="#" class="user-link">@user.FirstName</a></td>
+                    <td><a href="#" class="user-link">@user.LastName</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No users found.</p>
+}

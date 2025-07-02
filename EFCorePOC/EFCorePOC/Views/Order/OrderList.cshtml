@@ -1,0 +1,600 @@
+﻿@model IEnumerable<EFCore.Service.DTOModels.OrderDTO>
+
+@inject IHttpContextAccessor HttpContextAccessor
+@using System.Text.Json
+@using EFCore.Service.DTOModels
+
+@{
+    var userJson = HttpContextAccessor.HttpContext?.Session.GetString("User");
+    var user = !string.IsNullOrEmpty(userJson) ? JsonSerializer.Deserialize<UserDTO>(userJson) : null;
+    var isAdminUser = user?.Role == "Admin";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+@await Html.PartialAsync("Navbar")
+<div class="container mt-5">
+    <h2>Orders List</h2>
+
+    <!-- Filter & Search Section -->
+    <div class="mb-4">
+        <div class="row">
+            @if (isAdminUser)
+            {
+                <div class="col-md-4 mb-2">
+                    <input type="number" id="userFilter" class="form-control" placeholder="Filter by User ID">
+                </div>
+            }
+            <div class="col-md-4 mb-2">
+                <select id="statusFilter" class="form-select">
+                    <option value="">All Statuses</option>
+                    <option value="1">Pending</option>
+                    <option value="2">Accepted</option>
+                    <option value="3">Rejected</option>
+                    <option value="4">Shipped</option>
+                    <option value="5">Delivered</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-2">
+                <select id="sortBy" class="form-select">
+                    <option value="">Sort By</option>
+                    <option value="id">ID (Asc)</option>
+                    <option value="id_desc">ID (Desc)</option>
+                    <option value="date">Date (Oldest)</option>
+                    <option value="date_desc">Date (Newest)</option>
+                    <option value="amount">Amount (Low-High)</option>
+                    <option value="amount_desc">Amount (High-Low)</option>
+                    <option value="status">Status (Asc)</option>
+                    <option value="status_desc">Status (Desc)</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6 mb-2">
+                <input type="number" id="minTotal" class="form-control" placeholder="Min Amount">
+            </div>
+            <div class="col-md-6 mb-2">
+                <input type="number" id="maxTotal" class="form-control" placeholder="Max Amount">
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12">
+                <button id="applyFilters" class="btn btn-primary">Apply Filters</button>
+                <button id="resetFilters" class="btn btn-secondary">Reset Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Orders Table -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    @if (isAdminUser)
+                    {
+                        <th>User ID</th>
+                    }
+                    <th>Total Amount</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="ordersTable">
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td>@order.Id</td>
+                        <td>@order.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                        @if (isAdminUser)
+                        {
+                            <td>@order.UserId</td>
+                        }
+                        <td>$@order.TotalAmount.ToString("F2")</td>
+                        <td>
+                            @{
+                                string statusText = order.StatusId switch
+                                {
+                                    1 => "Pending",
+                                    2 => "Accepted",
+                                    3 => "Rejected",
+                                    4 => "Shipped",
+                                    5 => "Delivered",
+                                    _ => "Unknown"
+                                };
+
+                                string statusClass = order.StatusId switch
+                                {
+                                    1 => "text-warning",
+                                    2 => "text-primary",
+                                    3 => "text-danger",
+                                    4 => "text-info",
+                                    5 => "text-success",
+                                    _ => ""
+                                };
+                            }
+                            <span class="@statusClass">@statusText</span>
+                        </td>
+                        <td>
+                            <button class="btn btn-info btn-sm viewOrder" data-id="@order.Id">View Details</button>
+                            @if (isAdminUser)
+                            {
+                                <button class="btn btn-warning btn-sm editStatus" data-id="@order.Id" data-status="@order.StatusId">Edit Status</button>
+                            }
+                            else if (order.StatusId == 1) // Allow non-admin to reject pending orders
+                            {
+                                <button class="btn btn-danger btn-sm rejectOrder" data-id="@order.Id">Reject Order</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- View Order Details Modal -->
+<div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderDetailsModalLabel">Order Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>Order ID:</strong> <span id="detailOrderId"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Date:</strong> <span id="detailDate"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Status:</strong> <span id="detailStatus"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <strong>User ID:</strong> <span id="detailUserId"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Total Amount:</strong> $<span id="detailAmount"></span>
+                    </div>
+                </div>
+                <h6>Order Items:</h6>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderItemsTable">
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Status Modal -->
+<div class="modal fade" id="editStatusModal" tabindex="-1" aria-labelledby="editStatusModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editStatusModalLabel">Edit Order Status</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editStatusForm">
+                    <input type="hidden" id="editOrderId">
+                    <input type="hidden" id="editOrderTotalAmount">
+                    <input type="hidden" id="editOrderUserId">
+                    <input type="hidden" id="editOrderCreatedAt">
+                    <div class="mb-3">
+                        <label for="editOrderStatus" class="form-label">Status</label>
+                        <select id="editOrderStatus" class="form-select" required>
+                            <option value="1">Pending</option>
+                            <option value="2">Accepted</option>
+                            <!-- Removed Rejected option for admins -->
+                            <option value="4">Shipped</option>
+                            <option value="5">Delivered</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveStatusChanges">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reject Order Confirmation Modal -->
+<div class="modal fade" id="rejectOrderModal" tabindex="-1" aria-labelledby="rejectOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="rejectOrderModalLabel">Reject Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to reject this order?</p>
+                <input type="hidden" id="rejectOrderId">
+                <input type="hidden" id="rejectOrderTotalAmount">
+                <input type="hidden" id="rejectOrderCreatedAt">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmRejectOrder">Reject Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const isAdminUser = @Json.Serialize(isAdminUser);
+            const userId = @Json.Serialize(user?.Id ?? 0);
+
+            // If not admin, filter orders for current user only
+            if (!isAdminUser) {
+                loadOrders({ userId: userId });
+            } else {
+                loadOrders();
+            }
+
+            // Handle filter button click
+            $('#applyFilters').click(function() {
+                loadOrders(getFilterParams());
+            });
+
+            // Reset filters
+            $('#resetFilters').click(function() {
+                $('#statusFilter').val('');
+                $('#sortBy').val('');
+                $('#minTotal').val('');
+                $('#maxTotal').val('');
+                if (isAdminUser) {
+                    $('#userFilter').val('');
+                    loadOrders();
+                } else {
+                    loadOrders({ userId: userId });
+                }
+            });
+
+            // Get filter parameters
+            function getFilterParams() {
+                const params = {};
+
+                if (isAdminUser) {
+                    const userFilterValue = $('#userFilter').val().trim();
+                    if (userFilterValue) {
+                        params.userId = parseInt(userFilterValue);
+                    }
+                } else {
+                    params.userId = userId;
+                }
+
+                const statusFilterValue = $('#statusFilter').val();
+                if (statusFilterValue) {
+                    params.statusId = parseInt(statusFilterValue);
+                }
+
+                const minTotalValue = $('#minTotal').val();
+                if (minTotalValue) {
+                    params.minTotal = parseFloat(minTotalValue);
+                }
+
+                const maxTotalValue = $('#maxTotal').val();
+                if (maxTotalValue) {
+                    params.maxTotal = parseFloat(maxTotalValue);
+                }
+
+                const sortByValue = $('#sortBy').val();
+                if (sortByValue) {
+                    params.sortBy = sortByValue;
+                }
+
+                return params;
+            }
+
+            // Load orders with filters
+            function loadOrders(params = {}) {
+                $.ajax({
+                    url: '/Order/ListOrders',
+                    method: 'GET',
+                    data: params,
+                    success: function(orders) {
+                        updateOrdersTable(orders);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error loading orders:", error);
+                    }
+                });
+            }
+
+            // Update orders table with data
+            function updateOrdersTable(orders) {
+                let rows = '';
+
+                orders.forEach(order => {
+                    let statusText = '';
+                    let statusClass = '';
+
+                    switch(order.statusId) {
+                        case 1: statusText = 'Pending'; statusClass = 'text-warning'; break;
+                        case 2: statusText = 'Accepted'; statusClass = 'text-primary'; break;
+                        case 3: statusText = 'Rejected'; statusClass = 'text-danger'; break;
+                        case 4: statusText = 'Shipped'; statusClass = 'text-info'; break;
+                        case 5: statusText = 'Delivered'; statusClass = 'text-success'; break;
+                        default: statusText = 'Unknown'; break;
+                    }
+
+                    const date = new Date(order.createdAt).toLocaleString();
+
+                    rows += '<tr>';
+                    rows += `<td>${order.id}</td>`;
+                    rows += `<td>${date}</td>`;
+
+                    if (isAdminUser) {
+                        rows += `<td>${order.userId}</td>`;
+                    }
+
+                    rows += `<td>$${order.totalAmount.toFixed(2)}</td>`;
+                    rows += `<td><span class="${statusClass}">${statusText}</span></td>`;
+                    rows += '<td>';
+                    rows += `<button class="btn btn-info btn-sm viewOrder" data-id="${order.id}">View Details</button>`;
+
+                    if (isAdminUser) {
+                        rows += `<button class="btn btn-warning btn-sm ms-1 editStatus" data-id="${order.id}" data-status="${order.statusId}">Edit Status</button>`;
+                    } else if (order.statusId === 1) { // Only allow rejecting if status is Pending
+                        rows += `<button class="btn btn-danger btn-sm ms-1 rejectOrder" data-id="${order.id}">Reject Order</button>`;
+                    }
+
+                    rows += '</td>';
+                    rows += '</tr>';
+                });
+
+                if (orders.length === 0) {
+                    const colSpan = isAdminUser ? 6 : 5;
+                    rows = `<tr><td colspan="${colSpan}" class="text-center">No orders found</td></tr>`;
+                }
+
+                $('#ordersTable').html(rows);
+                attachEventHandlers();
+            }
+
+            // View order details
+            function viewOrderDetails(orderId) {
+                $.ajax({
+                    url: `/Order/ListOrders`,
+                    method: 'GET',
+                    data: { id: orderId },
+                    success: function(order) {
+                        if (order) {
+                            let statusText = '';
+                            let statusClass = '';
+
+                            switch(order.statusId) {
+                                case 1: statusText = 'Pending'; statusClass = 'text-warning'; break;
+                                case 2: statusText = 'Accepted'; statusClass = 'text-primary'; break;
+                                case 3: statusText = 'Rejected'; statusClass = 'text-danger'; break;
+                                case 4: statusText = 'Shipped'; statusClass = 'text-info'; break;
+                                case 5: statusText = 'Delivered'; statusClass = 'text-success'; break;
+                                default: statusText = 'Unknown'; break;
+                            }
+
+                            const date = new Date(order.createdAt).toLocaleString();
+
+                            $('#detailOrderId').text(order.id);
+                            $('#detailDate').text(date);
+                            $('#detailStatus').html(`<span class="${statusClass}">${statusText}</span>`);
+                            $('#detailUserId').text(order.userId);
+                            $('#detailAmount').text(order.totalAmount.toFixed(2));
+
+                            let itemRows = '';
+                            if (order.orderProducts && order.orderProducts.length > 0) {
+                                order.orderProducts.forEach(item => {
+                                    itemRows += '<tr>';
+                                    itemRows += `<td>${item.productId || 'Unknown'}</td>`;
+                                    itemRows += `<td>${item.product ? item.product.name || 'Unknown' : 'Unknown'}</td>`;
+                                    itemRows += `<td>$${item.product ? item.product.price.toFixed(2) : '0.00'}</td>`;
+                                    itemRows += '</tr>';
+                                });
+                            } else {
+                                itemRows = '<tr><td colspan="3" class="text-center">No items found</td></tr>';
+                            }
+
+                            $('#orderItemsTable').html(itemRows);
+
+                            const detailsModal = new bootstrap.Modal(document.getElementById('orderDetailsModal'));
+                            detailsModal.show();
+                        } else {
+                            alert('Order not found');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error loading order details:", error);
+                        alert('Failed to load order details');
+                    }
+                });
+            }
+
+            // Attach event handlers to dynamic elements
+            function attachEventHandlers() {
+                // View order details
+                $('.viewOrder').off('click').on('click', function() {
+                    const orderId = $(this).data('id');
+                    viewOrderDetails(orderId);
+                });
+
+                // Edit order status (admin only)
+                $('.editStatus').off('click').on('click', function() {
+                    const orderId = $(this).data('id');
+
+                    // First get the complete order details
+                    $.ajax({
+                        url: `/Order/ListOrders`,
+                        method: 'GET',
+                        data: { id: orderId },
+                        success: function(order) {
+                            if (order) {
+                                // Don't allow admins to edit orders that are already rejected
+                                if (order.statusId === 3) {
+                                    alert('This order has already been rejected and cannot be modified.');
+                                    return;
+                                }
+
+                                $('#editOrderId').val(order.id);
+                                // Set status, but prevent selection of reject option for admins
+                                if (order.statusId === 3) {
+                                    // If the order is already rejected, show status but don't allow changes
+                                    // Just for display purposes
+                                    alert('This order is already rejected and cannot be modified');
+                                    return;
+                                } else {
+                                    $('#editOrderStatus').val(order.statusId);
+                                }
+
+                                $('#editOrderTotalAmount').val(order.totalAmount);
+                                $('#editOrderUserId').val(order.userId);
+                                $('#editOrderCreatedAt').val(order.createdAt);
+
+                                const editModal = new bootstrap.Modal(document.getElementById('editStatusModal'));
+                                editModal.show();
+                            } else {
+                                alert('Order not found');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error loading order details:", error);
+                            alert('Failed to load order details');
+                        }
+                    });
+                });
+
+                // Reject order (non-admin only)
+                $('.rejectOrder').off('click').on('click', function() {
+                    const orderId = $(this).data('id');
+
+                    // Get order details
+                    $.ajax({
+                        url: `/Order/ListOrders`,
+                        method: 'GET',
+                        data: { id: orderId },
+                        success: function(order) {
+                            if (order) {
+                                if (order.statusId !== 1) {
+                                    alert('Only pending orders can be rejected');
+                                    return;
+                                }
+
+                                $('#rejectOrderId').val(order.id);
+                                $('#rejectOrderTotalAmount').val(order.totalAmount);
+                                $('#rejectOrderCreatedAt').val(order.createdAt);
+
+                                const rejectModal = new bootstrap.Modal(document.getElementById('rejectOrderModal'));
+                                rejectModal.show();
+                            } else {
+                                alert('Order not found');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error loading order details:", error);
+                            alert('Failed to load order details');
+                        }
+                    });
+                });
+            }
+
+            // Save status changes (admin)
+            $('#saveStatusChanges').click(function() {
+                const orderId = $('#editOrderId').val();
+                const statusId = $('#editOrderStatus').val();
+                const totalAmount = parseFloat($('#editOrderTotalAmount').val() || '0');
+                const userId = parseInt($('#editOrderUserId').val() || '0');
+                const createdAt = $('#editOrderCreatedAt').val();
+
+                if (!orderId || !statusId) {
+                    alert('Missing order information');
+                    return;
+                }
+
+                // Prevent admin from setting status to rejected (3)
+                if (isAdminUser && statusId == 3) {
+                    alert('Admin users cannot reject orders');
+                    return;
+                }
+
+                $.ajax({
+                    url: '/Order/EditOrder',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        Id: parseInt(orderId),
+                        StatusId: parseInt(statusId),
+                        TotalAmount: totalAmount,
+                        UserId: userId,
+                        CreatedAt: createdAt
+                    }),
+                    success: function() {
+                        // Hide modal and refresh orders
+                        bootstrap.Modal.getInstance(document.getElementById('editStatusModal')).hide();
+                        loadOrders(getFilterParams());
+                        alert('Order status updated successfully');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error updating order status:", error);
+                        alert('Failed to update order status');
+                    }
+                });
+            });
+
+            // Confirm reject order (non-admin)
+            $('#confirmRejectOrder').click(function() {
+                const orderId = $('#rejectOrderId').val();
+                const totalAmount = parseFloat($('#rejectOrderTotalAmount').val() || '0');
+                const createdAt = $('#rejectOrderCreatedAt').val();
+
+                if (!orderId) {
+                    alert('Missing order information');
+                    return;
+                }
+
+                $.ajax({
+                    url: '/Order/EditOrder',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        Id: parseInt(orderId),
+                        StatusId: 3, // Set to Rejected (3)
+                        TotalAmount: totalAmount,
+                        UserId: userId, // Current user
+                        CreatedAt: createdAt
+                    }),
+                    success: function() {
+                        // Hide modal and refresh orders
+                        bootstrap.Modal.getInstance(document.getElementById('rejectOrderModal')).hide();
+                        loadOrders(getFilterParams());
+                        alert('Order has been rejected');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error rejecting order:", error);
+                        alert('Failed to reject order');
+                    }
+                });
+            });
+        });
+    </script>
+}

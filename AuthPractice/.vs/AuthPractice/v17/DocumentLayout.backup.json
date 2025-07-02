@@ -1,0 +1,202 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8421D7-1F40-4953-9DE7-62ABDB0725AB}|AuthPractice.Data\\AuthPractice.Data.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.data\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F8421D7-1F40-4953-9DE7-62ABDB0725AB}|AuthPractice.Data\\AuthPractice.Data.csproj|solutionrelative:authpractice.data\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{712EFC6A-1A45-424E-8A11-73728096615A}|AuthPractice.Business\\AuthPractice.Business.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.business\\services\\authservice\\authbusinessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712EFC6A-1A45-424E-8A11-73728096615A}|AuthPractice.Business\\AuthPractice.Business.csproj|solutionrelative:authpractice.business\\services\\authservice\\authbusinessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{712EFC6A-1A45-424E-8A11-73728096615A}|AuthPractice.Business\\AuthPractice.Business.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.business\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{712EFC6A-1A45-424E-8A11-73728096615A}|AuthPractice.Business\\AuthPractice.Business.csproj|solutionrelative:authpractice.business\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F06806F-2960-4061-9608-88F6A29D0736}|AuthPractice.Core\\AuthPractice.Core.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.core\\dtos\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F06806F-2960-4061-9608-88F6A29D0736}|AuthPractice.Core\\AuthPractice.Core.csproj|solutionrelative:authpractice.core\\dtos\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F06806F-2960-4061-9608-88F6A29D0736}|AuthPractice.Core\\AuthPractice.Core.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.core\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F06806F-2960-4061-9608-88F6A29D0736}|AuthPractice.Core\\AuthPractice.Core.csproj|solutionrelative:authpractice.core\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F06806F-2960-4061-9608-88F6A29D0736}|AuthPractice.Core\\AuthPractice.Core.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.core\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F06806F-2960-4061-9608-88F6A29D0736}|AuthPractice.Core\\AuthPractice.Core.csproj|solutionrelative:authpractice.core\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F06806F-2960-4061-9608-88F6A29D0736}|AuthPractice.Core\\AuthPractice.Core.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.core\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F06806F-2960-4061-9608-88F6A29D0736}|AuthPractice.Core\\AuthPractice.Core.csproj|solutionrelative:authpractice.core\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8421D7-1F40-4953-9DE7-62ABDB0725AB}|AuthPractice.Data\\AuthPractice.Data.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.data\\repositories\\userrepository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F8421D7-1F40-4953-9DE7-62ABDB0725AB}|AuthPractice.Data\\AuthPractice.Data.csproj|solutionrelative:authpractice.data\\repositories\\userrepository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8421D7-1F40-4953-9DE7-62ABDB0725AB}|AuthPractice.Data\\AuthPractice.Data.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.data\\repositories\\userrepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F8421D7-1F40-4953-9DE7-62ABDB0725AB}|AuthPractice.Data\\AuthPractice.Data.csproj|solutionrelative:authpractice.data\\repositories\\userrepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62B8D409-F2B5-4357-849A-5B460D91E6FB}|AuthPractice.Web\\AuthPractice.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.web\\services\\webauthservice\\webauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62B8D409-F2B5-4357-849A-5B460D91E6FB}|AuthPractice.Web\\AuthPractice.Web.csproj|solutionrelative:authpractice.web\\services\\webauthservice\\webauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62B8D409-F2B5-4357-849A-5B460D91E6FB}|AuthPractice.Web\\AuthPractice.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\authpractice\\authpractice.web\\services\\webauthservice\\iwebauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62B8D409-F2B5-4357-849A-5B460D91E6FB}|AuthPractice.Web\\AuthPractice.Web.csproj|solutionrelative:authpractice.web\\services\\webauthservice\\iwebauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Data\\Contexts\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Data\\Contexts\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Data\\Contexts\\ApplicationDbContext.cs",
+              "RelativeToolTip": "AuthPractice.Data\\Contexts\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T11:47:10.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthBusinessService.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Business\\Services\\AuthService\\AuthBusinessService.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Business\\Services\\AuthService\\AuthBusinessService.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Business\\Services\\AuthService\\AuthBusinessService.cs",
+              "RelativeToolTip": "AuthPractice.Business\\Services\\AuthService\\AuthBusinessService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAwDgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:02:33.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\DTOs\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Core\\DTOs\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\DTOs\\RegisterRequest.cs",
+              "RelativeToolTip": "AuthPractice.Core\\DTOs\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:57:46.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\DTOs\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Core\\DTOs\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\DTOs\\LoginRequest.cs",
+              "RelativeToolTip": "AuthPractice.Core\\DTOs\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:57:45.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\DTOs\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Core\\DTOs\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\DTOs\\LoginResponse.cs",
+              "RelativeToolTip": "AuthPractice.Core\\DTOs\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:54:13.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Core\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "AuthPractice.Core\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:50:49.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Business\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Business\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Business\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "AuthPractice.Business\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:40:59.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Data\\Repositories\\UserRepository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Data\\Repositories\\UserRepository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Data\\Repositories\\UserRepository\\UserRepository.cs",
+              "RelativeToolTip": "AuthPractice.Data\\Repositories\\UserRepository\\UserRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T10:08:05.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Data\\Repositories\\UserRepository\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Data\\Repositories\\UserRepository\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Data\\Repositories\\UserRepository\\IUserRepository.cs",
+              "RelativeToolTip": "AuthPractice.Data\\Repositories\\UserRepository\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T10:05:42.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WebAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Web\\Services\\WebAuthService\\WebAuthService.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Web\\Services\\WebAuthService\\WebAuthService.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Web\\Services\\WebAuthService\\WebAuthService.cs",
+              "RelativeToolTip": "AuthPractice.Web\\Services\\WebAuthService\\WebAuthService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T11:52:47.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IWebAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Web\\Services\\WebAuthService\\IWebAuthService.cs",
+              "RelativeDocumentMoniker": "AuthPractice.Web\\Services\\WebAuthService\\IWebAuthService.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Web\\Services\\WebAuthService\\IWebAuthService.cs",
+              "RelativeToolTip": "AuthPractice.Web\\Services\\WebAuthService\\IWebAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T11:52:25.494Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

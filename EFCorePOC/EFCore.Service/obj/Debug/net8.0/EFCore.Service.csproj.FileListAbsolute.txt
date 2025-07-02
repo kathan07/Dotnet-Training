@@ -1,0 +1,15 @@
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\bin\Debug\net8.0\EFCore.Service.deps.json
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\bin\Debug\net8.0\EFCore.Service.dll
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\bin\Debug\net8.0\EFCore.Service.pdb
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\bin\Debug\net8.0\EFCore.Data.dll
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\bin\Debug\net8.0\EFCore.Data.pdb
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\EFCore.Service.csproj.AssemblyReference.cache
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\EFCore.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\EFCore.Service.AssemblyInfoInputs.cache
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\EFCore.Service.AssemblyInfo.cs
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\EFCore.Service.csproj.CoreCompileInputs.cache
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\EFCore.S.8C595BFF.Up2Date
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\EFCore.Service.dll
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\refint\EFCore.Service.dll
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\EFCore.Service.pdb
+C:\Users\KathanThakkar\source\repos\EFCorePOC\EFCore.Service\obj\Debug\net8.0\ref\EFCore.Service.dll

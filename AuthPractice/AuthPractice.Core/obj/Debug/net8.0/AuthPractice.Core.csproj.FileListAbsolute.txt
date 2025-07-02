@@ -1,0 +1,11 @@
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\bin\Debug\net8.0\AuthPractice.Core.deps.json
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\bin\Debug\net8.0\AuthPractice.Core.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\bin\Debug\net8.0\AuthPractice.Core.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\obj\Debug\net8.0\AuthPractice.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\obj\Debug\net8.0\AuthPractice.Core.AssemblyInfoInputs.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\obj\Debug\net8.0\AuthPractice.Core.AssemblyInfo.cs
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\obj\Debug\net8.0\AuthPractice.Core.csproj.CoreCompileInputs.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\obj\Debug\net8.0\AuthPractice.Core.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\obj\Debug\net8.0\refint\AuthPractice.Core.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\obj\Debug\net8.0\AuthPractice.Core.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Core\obj\Debug\net8.0\ref\AuthPractice.Core.dll

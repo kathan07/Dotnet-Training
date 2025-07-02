@@ -1,0 +1,17 @@
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\bin\Debug\net8.0\AuthPractice.Data.deps.json
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\bin\Debug\net8.0\AuthPractice.Data.runtimeconfig.json
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\bin\Debug\net8.0\AuthPractice.Data.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\bin\Debug\net8.0\AuthPractice.Data.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\bin\Debug\net8.0\AuthPractice.Core.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\bin\Debug\net8.0\AuthPractice.Core.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPractice.Data.csproj.AssemblyReference.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPractice.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPractice.Data.AssemblyInfoInputs.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPractice.Data.AssemblyInfo.cs
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPractice.Data.csproj.CoreCompileInputs.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPrac.FAD98C63.Up2Date
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPractice.Data.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\refint\AuthPractice.Data.dll
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPractice.Data.pdb
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\AuthPractice.Data.genruntimeconfig.cache
+C:\Users\KathanThakkar\source\repos\AuthPractice\AuthPractice.Data\obj\Debug\net8.0\ref\AuthPractice.Data.dll

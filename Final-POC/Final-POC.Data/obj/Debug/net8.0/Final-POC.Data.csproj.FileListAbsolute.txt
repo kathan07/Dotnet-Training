@@ -1,0 +1,14 @@
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\bin\Debug\net8.0\Final-POC.Data.deps.json
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\bin\Debug\net8.0\Final-POC.Data.runtimeconfig.json
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\bin\Debug\net8.0\Final-POC.Data.dll
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\bin\Debug\net8.0\Final-POC.Data.pdb
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\Final-POC.Data.csproj.AssemblyReference.cache
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\Final-POC.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\Final-POC.Data.AssemblyInfoInputs.cache
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\Final-POC.Data.AssemblyInfo.cs
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\Final-POC.Data.csproj.CoreCompileInputs.cache
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\Final-POC.Data.dll
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\refint\Final-POC.Data.dll
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\Final-POC.Data.pdb
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\Final-POC.Data.genruntimeconfig.cache
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Data\obj\Debug\net8.0\ref\Final-POC.Data.dll

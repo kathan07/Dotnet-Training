@@ -1,0 +1,17 @@
+﻿@using System.Security.Claims
+@{
+    ViewData["Title"] = "Welcome";
+    var username = User.Identity.IsAuthenticated
+        ? User.FindFirst(ClaimTypes.Name)?.Value
+        : "Guest";
+
+    var isAdmin = User.IsInRole("Admin");
+    var dashboardTitle = isAdmin ? "Admin Dashboard" : "User Dashboard";
+}
+
+@await Html.PartialAsync("Navbar")
+
+<div class="container pt-5 text-center">
+    <h1 class="display-4">Hello, @username!</h1>
+    <p class="lead">Welcome to the @dashboardTitle.</p>
+</div>

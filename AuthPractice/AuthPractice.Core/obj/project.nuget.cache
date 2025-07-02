@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oXjqOb78Toc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\KathanThakkar\\source\\repos\\AuthPractice\\AuthPractice.Core\\AuthPractice.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KathanThakkar\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

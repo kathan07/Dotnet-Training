@@ -1,0 +1,172 @@
+﻿@model MVC_POC.Models.User
+@{
+    var isAdmin = ViewBag.IsAdmin ?? false;
+    var isCurrentUser = ViewBag.CurrentUserEmail == Model.Email;
+    string countryFilter = ViewBag.CountryFilter;
+}
+
+<div class="card p-3">
+    <h4>User Details</h4>
+
+    <form id="userForm">
+        <input type="hidden" id="userEmail" name="Email" value="@Model.Email" />
+
+        <div class="mb-3">
+            <label>Email:</label>
+            <input type="text" class="form-control" value="@Model.Email" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label>First Name:</label>
+            <input type="text" class="form-control" id="firstName" name="FirstName" value="@Model.FirstName" @(isAdmin || isCurrentUser ? "" : "disabled") />
+        </div>
+
+        <div class="mb-3">
+            <label>Last Name:</label>
+            <input type="text" class="form-control" id="lastName" name="LastName" value="@Model.LastName" @(isAdmin || isCurrentUser ? "" : "disabled") />
+        </div>
+
+        <div class="mb-3">
+            <label>Country:</label>
+            <select class="form-select" id="countrySelect" name="Country" @(isAdmin || isCurrentUser ? "" : "disabled")>
+                <option value="">Select Country</option>
+                <option value="United States" selected="@(Model.Country == "United States")">United States</option>
+                <option value="United Kingdom" selected="@(Model.Country == "United Kingdom")">United Kingdom</option>
+                <option value="India" selected="@(Model.Country == "India")">India</option>
+                <option value="Germany" selected="@(Model.Country == "Germany")">Germany</option>
+                <option value="Spain" selected="@(Model.Country == "Spain")">Spain</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label>State:</label>
+            <select class="form-select" id="stateSelect" name="State" @(isAdmin || isCurrentUser ? "" : "disabled")>
+                <option value="">Select State</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label>Phone:</label>
+            <input type="text" class="form-control" id="phone" name="Phone" value="@Model.Phone" @(isAdmin || isCurrentUser ? "" : "disabled") />
+        </div>
+
+        @if (isAdmin)
+        {
+            <div class="mb-3">
+                <label>Role:</label>
+                <select class="form-control" id="role" name="Role">
+                    <option value="2" selected = "@(Model.Role == RoleType.Member)">Member</option>
+                    <option value="1" selected = "@(Model.Role == RoleType.Admin)">Admin</option>
+                </select>
+            </div>
+        }
+
+        <button type="button" id="updateUserBtn" class="btn btn-primary" @(isAdmin || isCurrentUser ? "" : "disabled")>Update</button>
+
+        @if (isAdmin)
+        {
+            <button type="button" id="deleteUserBtn" class="btn btn-danger">Delete</button>
+        }
+    </form>
+</div>
+
+<script>
+    if (!window.countryStates) {
+        window.countryStates = {
+            "United States": ["California", "New York", "Texas", "Florida", "Illinois"],
+            "United Kingdom": ["England", "Scotland", "Wales", "Northern Ireland"],
+            "India": ["Delhi", "Maharashtra", "Karnataka", "Tamil Nadu", "West Bengal"],
+            "Germany": ["Bavaria", "Berlin", "Hesse", "North Rhine-Westphalia", "Saxony"],
+            "Spain": ["Andalusia", "Catalonia", "Madrid", "Valencia", "Galicia"]
+        };
+    }
+
+    $(document).ready(function () {
+        const currentState = "@Model.State";
+
+        function updateStates() {
+            const selectedCountry = $("#countrySelect").val();
+            const stateSelect = $("#stateSelect");
+            stateSelect.empty().append('<option value="">Select State</option>');
+
+            if (selectedCountry && window.countryStates[selectedCountry]) {
+                window.countryStates[selectedCountry].forEach(state => {
+                    const option = $("<option></option>").attr("value", state).text(state);
+                    if (state === currentState) {
+                        option.prop("selected", true); 
+                    }
+                    stateSelect.append(option);
+                });
+            }
+        }
+
+        setTimeout(updateStates, 100);
+
+        $("#countrySelect").change(updateStates);
+
+        $("#updateUserBtn").click(function () {
+            let userData = {
+                Email: $("#userEmail").val(),
+                FirstName: $("#firstName").val(),
+                LastName: $("#lastName").val(),
+                Country: $("#countrySelect").val(),
+                State: $("#stateSelect").val(),
+                Phone: $("#phone").val(),
+                Role: $("#role").val() ? parseInt($("#role").val()) : 0
+            };
+
+            $.ajax({
+                url: "/Home/UpdateUser",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(userData),
+                success: function (response) {
+                    alert(response.message);
+                    loadUsers("@countryFilter");
+                },
+                error: function (xhr) {
+                    alert("Error: " + xhr.responseText);
+                }
+            });
+        });
+
+        $("#deleteUserBtn").click(function () {
+            if (confirm("Are you sure you want to delete this user?")) {
+                let email = $("#userEmail").val();
+
+                $.ajax({
+                    url: "/Home/DeleteUser",
+                    type: "POST",
+                    data: { email: email },
+                    success: function () {
+                        alert("User deleted successfully!");
+                        loadUsers("@countryFilter");
+                        $("#userDetails").html("<p>Select a user to see details.</p>");
+                    },
+                    error: function () {
+                        alert("Error deleting user.");
+                    }
+                });
+            }
+        });
+
+        function loadUsers(country = "") {
+            $.ajax({
+                url: "/Home/GetUsers",
+                type: "GET",
+                data: { countryFilter: country },
+                success: function (data) {
+                    $("#userListContainer").html(data);
+                },
+                error: function () {
+                    $("#userListContainer").html("<p>Error loading users.</p>");
+                }
+            });
+        }
+
+        $("#countryFilterDropdown").change(function () {
+            let selectedCountry = $(this).val();
+            loadUsers(selectedCountry);
+        });
+    });
+</script>

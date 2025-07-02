@@ -1,0 +1,107 @@
+﻿@model Final_POC.Core.DTOs.LoginUserDto
+@{
+    ViewData["Title"] = "Sign In";
+}
+
+<section class="main-dev-for-all elementes-center position-relative" style="background: url('/Images/loginflow_bg.png') no-repeat center center / cover; width: 100vw; height: 100vh; font-size: 10px">
+    <div class="container">
+        <div class="common-box box-style margin-auto position-relative after-po w-100" style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.1);">
+            <div class="uper-bx">
+
+                <!-- Logo -->
+                <div class="text-center mb-4">
+                    <img src="/Images/logo.png" alt="Company Logo" style="max-width: 200px;" />
+                </div>
+
+                <!-- Login Form -->
+                <form asp-controller="Auth"
+                      asp-action="Login"
+                      method="post"
+                      class="form"
+                      autocomplete="off"
+                      novalidate="novalidate">
+
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger">
+                            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                            {
+                                <div>@error.ErrorMessage</div>
+                            }
+                        </div>
+                    }
+
+                    <div id="divLoginForm" class="login-form margin-auto">
+
+                        <!-- Welcome Title -->
+                        <div class="typography-div mb-4">
+                            <div class="bx-main-title">
+                                <h1>Welcome!</h1>
+                            </div>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="form-floating position-relative mb-3">
+                            <input asp-for="Email"
+                                   id="txtEmail"
+                                   class="form-control"
+                                   placeholder="Email"
+                                   tabindex="1"
+                                   autofocus
+                                   type="text" />
+                            <label class="form-label position-absolute" for="txtEmail">Email</label>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="form-floating position-relative mb-4">
+                            <input asp-for="Password"
+                                   id="txtPassword"
+                                   class="form-control"
+                                   type="password"
+                                   placeholder="Password"
+                                   tabindex="2" />
+                            <label class="form-label position-absolute" for="txtPassword">Password</label>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <!-- Login Button -->
+                        <div class="text-right">
+                            <div class="btn-group">
+                                <button id="btnLogin"
+                                        type="submit"
+                                        tabindex="3"
+                                        class="btn-invite">
+                                    <span>Login</span>
+                                    <span style="margin-left: 8px;">&#8594;</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Loader -->
+<div class="loading-wrapper">
+    <div class="loading-content"></div>
+    <div class="loading-text position-absolute">Loading...</div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+            const loader = document.querySelector(".loading-wrapper");
+
+            form.addEventListener("submit", function () {
+                loader.style.display = "flex"; // show the loader
+            });
+        });
+    </script>
+}

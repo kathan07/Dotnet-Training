@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Signin";
+}
+
+@model PracticeMVC1.Models.User
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <label>Username:</label>
+    <input type="text" asp-for="Username" class="form-control" />
+    <span asp-validation-for="Username" class="text-danger"></span>
+
+    <label>Password:</label>
+    <input type="password" asp-for="Password" class="form-control" />
+    <span asp-validation-for="Password" class="text-danger"></span>
+
+    <button type="submit" class="btn btn-primary">Signin</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+

@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\views\\user\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\views\\user\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\views\\order\\orderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\views\\order\\orderlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\views\\shared\\navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\views\\shared\\navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\efcorepoc\\efcorepoc\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CCA9D84-5852-4EFA-8494-81EBF4090514}|EFCorePOC\\EFCorePOC.Web.csproj|solutionrelative:efcorepoc\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "EFCorePOC\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "EFCorePOC\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-05T10:59:01.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderList.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\Order\\OrderList.cshtml",
+              "RelativeDocumentMoniker": "EFCorePOC\\Views\\Order\\OrderList.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\Order\\OrderList.cshtml",
+              "RelativeToolTip": "EFCorePOC\\Views\\Order\\OrderList.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T08:15:04.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Signin.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\User\\Signin.cshtml",
+              "RelativeDocumentMoniker": "EFCorePOC\\Views\\User\\Signin.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\User\\Signin.cshtml",
+              "RelativeToolTip": "EFCorePOC\\Views\\User\\Signin.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwCIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T16:33:10.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "EFCorePOC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "EFCorePOC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T16:29:55.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Navbar.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\Shared\\Navbar.cshtml",
+              "RelativeDocumentMoniker": "EFCorePOC\\Views\\Shared\\Navbar.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\Shared\\Navbar.cshtml",
+              "RelativeToolTip": "EFCorePOC\\Views\\Shared\\Navbar.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAmwDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T16:06:34.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "EFCorePOC\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "EFCorePOC\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T11:53:52.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Program.cs",
+              "RelativeDocumentMoniker": "EFCorePOC\\Program.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Program.cs",
+              "RelativeToolTip": "EFCorePOC\\Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T11:52:46.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "EFCorePOC\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "EFCorePOC\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T11:51:10.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "EFCorePOC\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\EFCorePOC\\EFCorePOC\\Controllers\\UserController.cs",
+              "RelativeToolTip": "EFCorePOC\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T11:49:57.123Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mvc-poc\\mvc-poc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|solutionrelative:mvc-poc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mvc-poc\\mvc-poc\\middleware\\authmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|solutionrelative:mvc-poc\\middleware\\authmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mvc-poc\\mvc-poc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|solutionrelative:mvc-poc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mvc-poc\\mvc-poc\\views\\shared\\navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|solutionrelative:mvc-poc\\views\\shared\\navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mvc-poc\\mvc-poc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|solutionrelative:mvc-poc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mvc-poc\\mvc-poc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|solutionrelative:mvc-poc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mvc-poc\\mvc-poc\\views\\auth\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DD02E603-11C9-40BA-9B3A-09E21B9113D6}|MVC-POC\\MVC-POC.csproj|solutionrelative:mvc-poc\\views\\auth\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MVC-POC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MVC-POC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T08:28:21.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MVC-POC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MVC-POC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T06:51:06.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "MVC-POC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "MVC-POC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T06:45:49.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Program.cs",
+              "RelativeDocumentMoniker": "MVC-POC\\Program.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Program.cs",
+              "RelativeToolTip": "MVC-POC\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwCgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T05:58:48.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Middleware\\AuthMiddleware.cs",
+              "RelativeDocumentMoniker": "MVC-POC\\Middleware\\AuthMiddleware.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Middleware\\AuthMiddleware.cs",
+              "RelativeToolTip": "MVC-POC\\Middleware\\AuthMiddleware.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T06:10:26.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Signup.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Views\\Auth\\Signup.cshtml",
+              "RelativeDocumentMoniker": "MVC-POC\\Views\\Auth\\Signup.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Views\\Auth\\Signup.cshtml",
+              "RelativeToolTip": "MVC-POC\\Views\\Auth\\Signup.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAI0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-03T05:43:42.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Navbar.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Views\\Shared\\Navbar.cshtml",
+              "RelativeDocumentMoniker": "MVC-POC\\Views\\Shared\\Navbar.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MVC-POC\\MVC-POC\\Views\\Shared\\Navbar.cshtml",
+              "RelativeToolTip": "MVC-POC\\Views\\Shared\\Navbar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T13:11:23.964Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

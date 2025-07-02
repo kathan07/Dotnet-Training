@@ -1,0 +1,639 @@
+﻿@model IEnumerable<EFCore.Service.DTOModels.ProductDTO>
+
+@inject IHttpContextAccessor HttpContextAccessor
+@using System.Text.Json
+@using EFCore.Service.DTOModels
+
+@{
+    var userJson = HttpContextAccessor.HttpContext?.Session.GetString("User");
+    var user = !string.IsNullOrEmpty(userJson) ? JsonSerializer.Deserialize<UserDTO>(userJson) : null;
+    var isAdminUser = user?.Role == "Admin";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+
+@await Html.PartialAsync("Navbar")
+<div class="container mt-5">
+    @if (isAdminUser)
+    {
+        <!-- Admin Section -->
+        <div class="mb-4">
+            <h3>Add Category</h3>
+            <form id="addCategoryForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="categoryName" placeholder="Category Name" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Category</button>
+            </form>
+        </div>
+
+        <!-- Category Management Section -->
+        <div class="mb-4">
+            <h3>Manage Categories</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Category Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="categoriesTable">
+                    <!-- Categories will be loaded here dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mb-4">
+            <h3>Add Product</h3>
+            <form id="addProductForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="productName" placeholder="Product Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="productPrice" placeholder="Price" required>
+                </div>
+                <div class="mb-3">
+                    <select id="productCategory" class="form-select" required></select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+            </form>
+        </div>
+    }
+
+    <!-- Filter & Search Section -->
+    <div class="mb-4">
+        <input type="text" id="searchInput" class="form-control mb-2" placeholder="Search Products...">
+        <select id="categoryFilter" class="form-select mb-2"></select>
+        <select id="sortBy" class="form-select mb-2">
+            <option value="">Sort By</option>
+            <option value="name">Name (A-Z)</option>
+            <option value="name_desc">Name (Z-A)</option>
+            <option value="price">Price (Low-High)</option>
+            <option value="price_desc">Price (High-Low)</option>
+        </select>
+    </div>
+
+    <!-- Products Table -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                @if (!isAdminUser)
+                {
+                    <th>Select</th>
+                }
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                @if (isAdminUser)
+                {
+                    <th>Actions</th>
+                }
+            </tr>
+        </thead>
+        <tbody id="productsTable">
+            @foreach (var product in Model)
+            {
+                <tr>
+                    @if (!isAdminUser)
+                    {
+                        <td><input type="checkbox" class="product-checkbox" value="@product.Id" data-price="@product.Price" data-name="@product.Name"></td>
+                    }
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.Category?.Name</td>
+                    @if (isAdminUser)
+                    {
+                        <td>
+                            <button class="btn btn-warning btn-sm editProduct" data-id="@product.Id">Edit</button>
+                            <button class="btn btn-danger btn-sm deleteProduct" data-id="@product.Id">Delete</button>
+                        </td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @if (!isAdminUser)
+    {
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Order Summary</h5>
+                        <p class="card-text">Selected Products: <span id="selectedCount">0</span></p>
+                        <p class="card-text">Total Amount: $<span id="totalAmount">0.00</span></p>
+                        <button id="placeOrder" class="btn btn-success">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Edit Product Modal -->
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editProductModalLabel">Edit Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editProductForm">
+                    <input type="hidden" id="editProductId">
+                    <div class="mb-3">
+                        <label for="editProductName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="editProductName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editProductPrice" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="editProductPrice" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editProductCategory" class="form-label">Category</label>
+                        <select id="editProductCategory" class="form-select" required></select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveProductChanges">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Category Modal -->
+<div class="modal fade" id="editCategoryModal" tabindex="-1" aria-labelledby="editCategoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editCategoryModalLabel">Edit Category</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editCategoryForm">
+                    <input type="hidden" id="editCategoryId">
+                    <div class="mb-3">
+                        <label for="editCategoryName" class="form-label">Category Name</label>
+                        <input type="text" class="form-control" id="editCategoryName" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveCategoryChanges">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Order Confirmation Modal -->
+<div class="modal fade" id="orderConfirmationModal" tabindex="-1" aria-labelledby="orderConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderConfirmationModalLabel">Order Confirmation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>You are about to place an order with the following details:</p>
+                <div class="mb-3">
+                    <strong>Selected Products:</strong>
+                    <ul id="orderProductsList"></ul>
+                </div>
+                <div class="mb-3">
+                    <strong>Total Amount: $<span id="orderTotalAmount">0.00</span></strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success" id="confirmOrder">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const isAdminUser = @Json.Serialize(isAdminUser);
+            const userId = @Json.Serialize(user?.Id ?? 0);
+
+            loadCategories();
+
+            // Load categories for filter, product forms, and categories table
+            function loadCategories() {
+                $.ajax({
+                    url: '/Category/ListCategories',
+                    method: 'GET',
+                    success: function (categories) {
+                        let filterOptions = '<option value="">All Categories</option>';
+                        let formOptions = '';
+                        let categoryRows = '';
+
+                        categories.forEach(category => {
+                            filterOptions += `<option value="${category.id}">${category.name}</option>`;
+                            formOptions += `<option value="${category.id}">${category.name}</option>`;
+
+                            if (isAdminUser) {
+                                categoryRows += `
+                                    <tr>
+                                        <td>${category.name}</td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm editCategory" data-id="${category.id}" data-name="${category.name}">Edit</button>
+                                            <button class="btn btn-danger btn-sm deleteCategory" data-id="${category.id}">Delete</button>
+                                        </td>
+                                    </tr>
+                                `;
+                            }
+                        });
+
+                        $('#categoryFilter').html(filterOptions);
+                        $('#productCategory').html(formOptions);
+                        $('#editProductCategory').html(formOptions);
+
+                        if (isAdminUser) {
+                            $('#categoriesTable').html(categoryRows);
+                            attachCategoryEventHandlers();
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error loading categories:", error);
+                    }
+                });
+            }
+
+            // Attach event handlers for category management
+            function attachCategoryEventHandlers() {
+                // Edit category button click
+                $('.editCategory').off('click').on('click', function() {
+                    const categoryId = $(this).data('id');
+                    const categoryName = $(this).data('name');
+
+                    // Fill the edit form with category data
+                    $('#editCategoryId').val(categoryId);
+                    $('#editCategoryName').val(categoryName);
+
+                    // Show the modal
+                    var editModal = new bootstrap.Modal(document.getElementById('editCategoryModal'));
+                    editModal.show();
+                });
+
+                // Delete category button click
+                $('.deleteCategory').off('click').on('click', function() {
+                    const categoryId = $(this).data('id');
+
+                    if (confirm('Are you sure you want to delete this category? This may affect products using this category.')) {
+                        $.ajax({
+                            url: '/Category/DeleteCategory?id=' + categoryId,
+                            method: 'DELETE',
+                            success: function() {
+                                loadCategories(); // Refresh categories
+                                filterProducts(); // Refresh product list
+                                alert('Category deleted successfully');
+                            },
+                            error: function(xhr, status, error) {
+                                console.error("Error deleting category:", error);
+                                alert('Failed to delete category: ' + (xhr.responseJSON?.message || error));
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Save category changes button click
+            $('#saveCategoryChanges').click(function() {
+                const categoryId = $('#editCategoryId').val();
+                const name = $('#editCategoryName').val();
+
+                if (!name) {
+                    alert('Please enter a category name');
+                    return;
+                }
+
+                $.ajax({
+                    url: '/Category/EditCategory',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        Id: parseInt(categoryId),
+                        Name: name
+                    }),
+                    success: function() {
+                        // Hide modal and refresh categories
+                        bootstrap.Modal.getInstance(document.getElementById('editCategoryModal')).hide();
+                        loadCategories();
+                        filterProducts(); // Refresh product list to update category names
+                        alert('Category updated successfully');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error updating category:", error);
+                        alert('Failed to update category: ' + (xhr.responseJSON?.message || error));
+                    }
+                });
+            });
+
+            // Add category form submission
+            $('#addCategoryForm').submit(function (e) {
+                e.preventDefault();
+                const name = $('#categoryName').val();
+
+                $.ajax({
+                    url: '/Category/AddCategory',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ Name: name }),
+                    success: function() {
+                        $('#categoryName').val('');
+                        loadCategories();
+                        alert('Category added successfully');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error adding category:", error);
+                        alert('Failed to add category');
+                    }
+                });
+            });
+
+            // Add product form submission
+            $('#addProductForm').submit(function (e) {
+                e.preventDefault();
+                const name = $('#productName').val();
+                const price = $('#productPrice').val();
+                const categoryId = $('#productCategory').val();
+
+                $.ajax({
+                    url: '/Product/AddProduct',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        Name: name,
+                        Price: parseFloat(price),
+                        CategoryId: parseInt(categoryId)
+                    }),
+                    success: function() {
+                        $('#productName').val('');
+                        $('#productPrice').val('');
+                        $('#productCategory').val('');
+                        filterProducts(); // Refresh product list
+                        alert('Product added successfully');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error adding product:", error);
+                        alert('Failed to add product');
+                    }
+                });
+            });
+
+            // Save product changes button click
+            $('#saveProductChanges').click(function() {
+                const productId = $('#editProductId').val();
+                const name = $('#editProductName').val();
+                const price = $('#editProductPrice').val();
+                const categoryId = $('#editProductCategory').val();
+
+                if (!name || !price || !categoryId) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+
+                $.ajax({
+                    url: '/Product/EditProduct',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        Id: parseInt(productId),
+                        Name: name,
+                        Price: parseFloat(price),
+                        CategoryId: parseInt(categoryId)
+                    }),
+                    success: function() {
+                        // Hide modal and refresh product list
+                        bootstrap.Modal.getInstance(document.getElementById('editProductModal')).hide();
+                        filterProducts();
+                        alert('Product updated successfully');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error updating product:", error);
+                        alert('Failed to update product');
+                    }
+                });
+            });
+
+            // Filter products when inputs change
+            $('#searchInput, #categoryFilter, #sortBy').on('change keyup', function() {
+                filterProducts();
+            });
+
+            // Function to filter and sort products
+            function filterProducts() {
+                const search = $('#searchInput').val();
+                const categoryId = $('#categoryFilter').val();
+                const sortBy = $('#sortBy').val();
+
+                $.ajax({
+                    url: '/Product/ListProducts',
+                    method: 'GET',
+                    data: {
+                        search: search,
+                        categoryId: categoryId ? parseInt(categoryId) : null,
+                        sortBy: sortBy
+                    },
+                    success: function(products) {
+                        updateProductsTable(products);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error filtering products:", error);
+                    }
+                });
+            }
+
+            // Update products table with filtered results
+            function updateProductsTable(products) {
+                let rows = '';
+                products.forEach(product => {
+                    rows += '<tr>';
+
+                    if (!isAdminUser) {
+                        rows += `<td><input type="checkbox" class="product-checkbox" value="${product.id}" data-price="${product.price}" data-name="${product.name}"></td>`;
+                    }
+
+                    rows += `
+                        <td>${product.name}</td>
+                        <td>${product.price}</td>
+                        <td>${product.category.name}</td>
+                    `;
+
+                    if (isAdminUser) {
+                        rows += `
+                            <td>
+                                <button class="btn btn-warning btn-sm editProduct" data-id="${product.id}">Edit</button>
+                                <button class="btn btn-danger btn-sm deleteProduct" data-id="${product.id}">Delete</button>
+                            </td>
+                        `;
+                    }
+
+                    rows += '</tr>';
+                });
+
+                $('#productsTable').html(rows);
+                attachEventHandlers();
+            }
+
+            // Load product data for editing
+            function loadProductForEdit(productId) {
+                $.ajax({
+                    url: `/Product/ListProducts?id=${productId}`,
+                    method: 'GET',
+                    success: function(products) {
+                        if (products && products.length > 0) {
+                            const product = products[0];
+
+                            // Fill the edit form with product data
+                            $('#editProductId').val(product.id);
+                            $('#editProductName').val(product.name);
+                            $('#editProductPrice').val(product.price);
+                            $('#editProductCategory').val(product.category.id);
+
+                            // Show the modal
+                            var editModal = new bootstrap.Modal(document.getElementById('editProductModal'));
+                            editModal.show();
+                        } else {
+                            alert('Product not found');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error loading product:", error);
+                        alert('Failed to load product data');
+                    }
+                });
+            }
+
+            // Update order summary
+            function updateOrderSummary() {
+                const selectedProducts = $('.product-checkbox:checked');
+                const count = selectedProducts.length;
+                let totalAmount = 0;
+
+                selectedProducts.each(function() {
+                    totalAmount += parseFloat($(this).data('price'));
+                });
+
+                $('#selectedCount').text(count);
+                $('#totalAmount').text(totalAmount.toFixed(2));
+            }
+
+            // Attach event handlers for dynamically added elements
+            function attachEventHandlers() {
+                // Edit product button click
+                $('.editProduct').off('click').on('click', function() {
+                    const productId = $(this).data('id');
+                    loadProductForEdit(productId);
+                });
+
+                // Delete product button click
+                $('.deleteProduct').off('click').on('click', function() {
+                    const productId = $(this).data('id');
+
+                    if (confirm('Are you sure you want to delete this product?')) {
+                        $.ajax({
+                            url: '/Product/DeleteProduct?id=' + productId,
+                            method: 'DELETE',
+                            success: function() {
+                                filterProducts(); // Refresh product list
+                                alert('Product deleted successfully');
+                            },
+                            error: function(xhr, status, error) {
+                                console.error("Error deleting product:", error);
+                                alert('Failed to delete product');
+                            }
+                        });
+                    }
+                });
+
+                // Product checkbox click
+                $('.product-checkbox').off('click').on('click', function() {
+                    updateOrderSummary();
+                });
+            }
+
+            // Place order button click
+            $('#placeOrder').click(function() {
+                const selectedProducts = $('.product-checkbox:checked');
+
+                if (selectedProducts.length === 0) {
+                    alert('Please select at least one product');
+                    return;
+                }
+
+                // Calculate total amount
+                let totalAmount = 0;
+                let productsList = '';
+
+                selectedProducts.each(function() {
+                    const productId = $(this).val();
+                    const productName = $(this).data('name');
+                    const productPrice = parseFloat($(this).data('price'));
+
+                    totalAmount += productPrice;
+                    productsList += `<li>${productName} - $${productPrice.toFixed(2)}</li>`;
+                });
+
+                // Update order confirmation modal
+                $('#orderProductsList').html(productsList);
+                $('#orderTotalAmount').text(totalAmount.toFixed(2));
+
+                // Show order confirmation modal
+                const orderModal = new bootstrap.Modal(document.getElementById('orderConfirmationModal'));
+                orderModal.show();
+            });
+
+            // Confirm order button click
+            $('#confirmOrder').click(function() {
+                const selectedProducts = $('.product-checkbox:checked').map(function() {
+                    return { ProductId: parseInt(this.value) };
+                }).get();
+
+                const totalAmount = parseFloat($('#totalAmount').text());
+
+                // Create order object
+                const order = {
+                    UserId: userId,
+                    StatusId: 1, // Assuming 1 is "New" status
+                    TotalAmount: totalAmount,
+                    OrderProducts: selectedProducts
+                };
+
+                // Send order to server
+                $.ajax({
+                    url: '/Order/AddOrder',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(order),
+                    success: function(result) {
+                        // Hide modal
+                        bootstrap.Modal.getInstance(document.getElementById('orderConfirmationModal')).hide();
+
+                        // Uncheck all checkboxes and update summary
+                        $('.product-checkbox').prop('checked', false);
+                        updateOrderSummary();
+
+                        alert(`Order #${result.id} has been placed successfully!`);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("Error placing order:", error);
+                        alert('Failed to place order');
+                    }
+                });
+            });
+
+            // Initial call to attach event handlers
+            attachEventHandlers();
+        });
+    </script>
+}

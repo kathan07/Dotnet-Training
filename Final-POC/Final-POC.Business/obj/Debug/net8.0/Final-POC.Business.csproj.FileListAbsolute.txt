@@ -1,0 +1,17 @@
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\bin\Debug\net8.0\Final-POC.Business.deps.json
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\bin\Debug\net8.0\Final-POC.Business.dll
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\bin\Debug\net8.0\Final-POC.Business.pdb
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\bin\Debug\net8.0\Final-POC.Core.dll
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\bin\Debug\net8.0\Final-POC.Data.dll
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\bin\Debug\net8.0\Final-POC.Core.pdb
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\bin\Debug\net8.0\Final-POC.Data.pdb
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\Final-POC.Business.csproj.AssemblyReference.cache
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\Final-POC.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\Final-POC.Business.AssemblyInfoInputs.cache
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\Final-POC.Business.AssemblyInfo.cs
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\Final-POC.Business.csproj.CoreCompileInputs.cache
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\Final-PO.C9A91D99.Up2Date
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\Final-POC.Business.dll
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\refint\Final-POC.Business.dll
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\Final-POC.Business.pdb
+C:\Users\KathanThakkar\source\repos\Final-POC\Final-POC.Business\obj\Debug\net8.0\ref\Final-POC.Business.dll

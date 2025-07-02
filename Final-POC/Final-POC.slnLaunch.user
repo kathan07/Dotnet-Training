@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Final-POC.API\\Final-POC.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Final-POC.Web\\Final-POC.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

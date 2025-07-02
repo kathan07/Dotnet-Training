@@ -1,0 +1,153 @@
+﻿@model MVC_POC.Models.User
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-primary text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <form asp-controller="Auth" asp-action="SignUp" method="post">
+
+                            <span class="text-danger">@TempData["error"]</span>
+                            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                            <div class="mb-md-3 mt-md-4 pb-0">
+                                <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
+                                <p class="text-white-50 mb-5">Please fill in your details to register!</p>
+
+                                <div class="form-outline form-white mb-3">
+                                    <input asp-for="FirstName" id="typeFirstNameX" class="form-control form-control-lg" />
+                                    <label asp-for="FirstName" class="form-label"></label>
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline form-white mb-3">
+                                    <input asp-for="LastName" id="typeLastNameX" class="form-control form-control-lg" />
+                                    <label asp-for="LastName" class="form-label"></label>
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline form-white mb-3">
+                                    <input asp-for="Email" type="email" id="typeEmailX" class="form-control form-control-lg" />
+                                    <label asp-for="Email" class="form-label"></label>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline form-white mb-3">
+                                    <input asp-for="Password" type="password" id="typePasswordX" class="form-control form-control-lg" />
+                                    <label asp-for="Password" class="form-label"></label>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline form-white mb-3">
+                                    <input asp-for="Phone" id="typePhoneX" class="form-control form-control-lg" />
+                                    <label asp-for="Phone" class="form-label"></label>
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline form-white mb-3">
+                                    <select asp-for="Country" id="countrySelect" class="form-select form-control-lg">
+                                        <option value="">Select Country</option>
+                                        <option value="United States">United States</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="India">India</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="Spain">Spain</option>
+                                    </select>
+                                    <span asp-validation-for="Country" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <select asp-for="State" id="stateSelect" name="State" class="form-select form-control-lg">
+                                        <option value="">Select State</option>
+                                    </select>
+                                    <span asp-validation-for="State" class="text-danger"></span>
+                                </div>
+
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign Up</button>
+                            </div>
+
+                            <div>
+                                <p class="mb-0">
+                                    Already have an account?
+                                    <a asp-controller="Auth" asp-action="Signin" class="text-white-50 fw-bold">Sign In</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+
+        const countryStates = {
+            "United States": [
+                "California",
+                "New York",
+                "Texas",
+                "Florida",
+                "Illinois"
+            ],
+            "United Kingdom": [
+                "England",
+                "Scotland",
+                "Wales",
+                "Northern Ireland"
+            ],
+            "India": [
+                "Delhi",
+                "Maharashtra",
+                "Karnataka",
+                "Tamil Nadu",
+                "West Bengal"
+            ],
+            "Germany": [
+                "Bavaria",
+                "Berlin",
+                "Hesse",
+                "North Rhine-Westphalia",
+                "Saxony"
+            ],
+            "Spain": [
+                "Andalusia",
+                "Catalonia",
+                "Madrid",
+                "Valencia",
+                "Galicia"
+            ]
+        };
+
+        const countrySelect = document.getElementById("countrySelect");
+        const stateSelect = document.getElementById("stateSelect");
+
+        function updateStates() {
+            const selectedCountry = countrySelect.value;
+            stateSelect.innerHTML = '<option value="">Select State</option>'; 
+
+            if (selectedCountry && countryStates[selectedCountry]) {
+                countryStates[selectedCountry].forEach(state => {
+                    const option = document.createElement("option");
+                    option.value = state;
+                    option.text = state;
+                    stateSelect.appendChild(option);
+                });
+            }
+        }
+
+        countrySelect.addEventListener("change", updateStates);
+
+        window.onload = function() {
+            if (countrySelect.value) {
+                updateStates();
+            }
+        };
+    </script>
+}

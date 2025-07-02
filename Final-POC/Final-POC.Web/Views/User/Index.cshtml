@@ -1,0 +1,398 @@
+﻿@model IList<Final_POC.Core.DTOs.UserDto>
+@{
+	ViewData["Title"] = "Users";
+}
+@await Html.PartialAsync("Navbar")
+<section class="main">
+	<!-- Add User Drawer -->
+	<div id="drawerAddUser" class="drawer">
+
+		<div class="overlay" style="display: none;">
+		</div>
+
+		<div class="drawer-inner">
+
+			<div class="drawer-title">
+				<a title="back" onclick="Common.closeDrawer('#drawerAddUser')">
+					<i class="nt-angle-prev"></i>
+				</a>
+				<h1>
+					Add User
+				</h1>
+			</div>
+
+			<form id="formAddUser" class="drawer-form">
+
+				<div class="row">
+
+					<div class="form-title">
+						Please provide following information about User.
+					</div>
+
+					<div class="col-lg-6 form-floating">
+						<input id="txtUsername" type="text" class="form-control" placeholder="" value=""
+						required>
+						<label for="txtUsername" class="form-label">
+							<span class="red">*</span>
+							Username
+						</label>
+					</div>
+
+					<div class="col-lg-6 form-floating">
+						<input id="txtEmail" type="email" class="form-control" placeholder="" value=""
+						required>
+						<label for="txtEmail" class="form-label">
+							<span class="red">*</span>
+							Email
+						</label>
+					</div>
+
+					<div class="col-lg-6 form-floating">
+						<input id="txtPassword" type="password" class="form-control" placeholder="" value=""
+						required>
+						<label for="txtPassword" class="form-label">
+							<span class="red">*</span>
+							Password
+						</label>
+					</div>
+
+					<div class="col-lg-6 form-floating">
+						<input id="txtRole" type="text" class="form-control" placeholder="" value="User"
+						readonly>
+						<label for="txtRole" class="form-label">
+							Role
+						</label>
+					</div>
+
+				</div>
+
+				<div class="invite-botttom">
+
+					<a class="cancel" onclick="Common.closeDrawer('#drawerAddUser')">
+						<i class="nt-backward"></i>
+						Cancel
+					</a>
+
+					<div class="invite">
+						<button id="btnSaveUser" type="submit" class="btn-invite">
+							Save
+						</button>
+					</div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<!-- Edit User Drawer -->
+	<div id="drawerEditUser" class="drawer">
+
+		<div class="overlay" style="display: none;">
+		</div>
+
+		<div class="drawer-inner">
+
+			<div class="drawer-title">
+				<a title="back" onclick="Common.closeDrawer('#drawerEditUser')">
+					<i class="nt-angle-prev"></i>
+				</a>
+				<h1>
+					Edit User
+				</h1>
+			</div>
+
+			<form id="formEditUser" class="drawer-form">
+
+				<div class="row">
+
+					<div class="form-title">
+						Please update the following information.
+					</div>
+
+					<input id="hdnUserId" type="hidden" value="">
+
+					<div class="col-lg-6 form-floating">
+						<input id="txtEditUsername" type="text" class="form-control" placeholder="" value=""
+						required>
+						<label for="txtEditUsername" class="form-label">
+							<span class="red">*</span>
+							Username
+						</label>
+					</div>
+
+					<div class="col-lg-6 form-floating">
+						<input id="txtEditEmail" type="email" class="form-control" placeholder="" value=""
+						required>
+						<label for="txtEditEmail" class="form-label">
+							<span class="red">*</span>
+							Email
+						</label>
+					</div>
+
+				</div>
+
+				<div class="invite-botttom">
+
+					<a class="cancel" onclick="Common.closeDrawer('#drawerEditUser')">
+						<i class="nt-backward"></i>
+						Cancel
+					</a>
+
+					<div class="invite">
+						<button id="btnUpdateUser" type="submit" class="btn-invite">
+							Update
+						</button>
+					</div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<!-- view user drawer -->
+	<div id="drawerViewUser" class="drawer">
+
+		<div class="overlay" style="display: none;">
+		</div>
+
+		<div class="drawer-inner">
+
+			<div class="drawer-title">
+				<a title="back" onclick="Common.closeDrawer('#drawerViewUser')">
+					<i class="nt-angle-prev"></i>
+				</a>
+				<h1 id="viewUserUsername">
+					Username
+				</h1>
+			</div>
+
+			<form class="drawer-form view-drawer">
+
+				<div class="row">
+
+					<div class="form-title">
+						User Information
+					</div>
+
+					<div class="col-lg-6 data-detail">
+						<div class="data-label">
+							Username
+						</div>
+						<div id="viewUsername" class="data-val">
+							Username
+						</div>
+					</div>
+
+					<div class="col-lg-6 data-detail">
+						<div class="data-label">
+							Email
+						</div>
+						<div id="viewEmail" class="data-val">
+							user@example.com
+						</div>
+					</div>
+
+					<div class="col-lg-6 data-detail">
+						<div class="data-label">
+							Role
+						</div>
+						<div id="viewRole" class="data-val">
+							User
+						</div>
+					</div>
+
+				</div>
+
+				<div class="invite-botttom">
+
+					<a class="cancel" onclick="Common.closeDrawer('#drawerViewUser')">
+						<i class="nt-backward"></i>
+						Cancel
+					</a>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<div class="container">
+
+		<div class="alerts-main">
+
+			<!-- heading and filter and add user button -->
+			<div class="alerts-title">
+
+				<h1>
+					Users (@Model.Count)
+				</h1>
+
+				<div class="alerts-icon">
+
+					<ul>
+
+						<li>
+							<div class="icon">
+
+								<i class="nt-filter" title="Filter"
+								onclick="Common.showFilter(this, '#divFilters')">
+								</i>
+
+								<div id="divFilters" class="filter-sorting">
+
+									<div class="filter-sorting-title">
+										<p>
+											Filters
+										</p>
+										<a title="close" class="close" onclick="Common.hideFilter('#divFilters')">
+											<span class="nt-close-o"></span>
+										</a>
+									</div>
+
+									<form id="formFilterUsers" class="mt-3">
+
+										<div class="row">
+
+											<div class="col-lg-12 form-floating">
+												<input id="txtFilterUsername" type="text" class="form-control"
+												placeholder="" value="">
+												<label for="txtFilterUsername">
+													Username
+												</label>
+											</div>
+
+											<div class="col-lg-12 form-floating">
+												<input id="txtFilterEmail" type="text" class="form-control"
+												placeholder="" value="">
+												<label for="txtFilterEmail">
+													Email
+												</label>
+											</div>
+
+										</div>
+
+									</form>
+
+									<div class="apply-botttom">
+
+										<a id="btnResetFilter" class="cancel">
+											<span class="nt-refresh"></span>
+											Reset
+										</a>
+
+										<a id="btnApplyFilter" class="btn-apply">
+											Apply Filter
+										</a>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</li>
+
+						<li class="invite">
+							<a title="invite" class="btn-invite"
+							onclick="Common.openDrawer('#drawerAddUser')">
+								Add User
+							</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<!-- user list -->
+			<div class="alerts-content">
+				@foreach (var user in Model)
+				{
+					if (user.Id != 1)
+					{
+						<div class="alerts-content-single" data-id="@user.Id">
+
+							<div class="alerts-content-inner">
+								<div class="content-main">
+									<div class="content-title">
+										<span>@user.Username</span>
+									</div>
+									<div class="content-desc">
+									</div>
+								</div>
+							</div>
+
+							<div class="alerts-content-inner">
+								<div class="content-main">
+									<div class="content-desc">
+										@user.Email
+									</div>
+								</div>
+							</div>
+
+							<div class="alerts-content-inner">
+								<div class="content-main">
+									<div class="content-last">
+
+										<span class="closed btn-all-case">
+											<i class="nt-tick"></i>
+											<span class="alert-text">
+												@user.Role
+											</span>
+										</span>
+
+										<div class="edit-links">
+											<em class="nt-more"></em>
+											<div class="link-box">
+												<div class="link view-user" data-id="@user.Id">
+													<em class="nt-eye"></em>
+													View
+												</div>
+												<div class="link edit-user" data-id="@user.Id">
+													<em class="nt-edit"></em>
+													Edit
+												</div>
+												<div class="link delete-user" data-id="@user.Id">
+													<em class="nt-bin"></em>
+													Delete
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+					}
+				}
+
+			</div>
+		</div>
+
+	</div>
+
+</section>
+
+<!-- loading ui -->
+<div class="loading-wrapper">
+	<div class="loading-content">
+	</div>
+	<div class="loading-text position-absolute">
+		Loading...
+	</div>
+</div>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+	<script src="~/js/users.js"></script>
+}
