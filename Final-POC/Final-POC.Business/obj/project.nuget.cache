@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GIKG60J6zgc=",
+  "dgSpecHash": "IMv+75Mdf2g=",
   "success": true,
-  "projectFilePath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj",
+  "projectFilePath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KathanThakkar\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\KathanThakkar\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

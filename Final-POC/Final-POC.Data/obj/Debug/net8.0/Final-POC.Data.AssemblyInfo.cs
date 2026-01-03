@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Final-POC.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acc158294c1f5b843ef3195a985b1e12183ab06e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Final-POC.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Final-POC.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,68 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\services\\apiservices\\apiservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\services\\apiservices\\apiservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DCD08B-B37F-451D-B11B-D1C2AA3DEB64}|Final-POC.Core\\Final-POC.Core.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.core\\dtos\\apiresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DCD08B-B37F-451D-B11B-D1C2AA3DEB64}|Final-POC.Core\\Final-POC.Core.csproj|solutionrelative:final-poc.core\\dtos\\apiresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\services\\apiservices\\iapiservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\services\\apiservices\\iapiservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\services\\authservices\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\services\\authservices\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\wwwroot\\js\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\wwwroot\\js\\users.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\wwwroot\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80DCD08B-B37F-451D-B11B-D1C2AA3DEB64}|Final-POC.Core\\Final-POC.Core.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.core\\dtos\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80DCD08B-B37F-451D-B11B-D1C2AA3DEB64}|Final-POC.Core\\Final-POC.Core.csproj|solutionrelative:final-poc.core\\dtos\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|c:\\users\\kathanthakkar\\source\\repos\\dotnet-practice-projects\\final-poc\\final-poc.web\\wwwroot\\js\\tasks.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3EDBBAE5-DF22-4568-8155-CB213BF54113}|Final-POC.Web\\Final-POC.Web.csproj|solutionrelative:final-poc.web\\wwwroot\\js\\tasks.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +70,279 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:148:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:150:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:149:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:151:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:152:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\DTOs\\ApiResponseDto.cs",
+              "RelativeDocumentMoniker": "Final-POC.Core\\DTOs\\ApiResponseDto.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\DTOs\\ApiResponseDto.cs",
+              "RelativeToolTip": "Final-POC.Core\\DTOs\\ApiResponseDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T10:59:14.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IApiServices.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Services\\ApiServices\\IApiServices.cs",
+              "RelativeDocumentMoniker": "Final-POC.Web\\Services\\ApiServices\\IApiServices.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Services\\ApiServices\\IApiServices.cs",
+              "RelativeToolTip": "Final-POC.Web\\Services\\ApiServices\\IApiServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T10:26:54.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Final-POC.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\appsettings.json",
+              "RelativeToolTip": "Final-POC.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-14T10:24:00.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApiServices.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Services\\ApiServices\\ApiServices.cs",
+              "RelativeDocumentMoniker": "Final-POC.Web\\Services\\ApiServices\\ApiServices.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Services\\ApiServices\\ApiServices.cs",
+              "RelativeToolTip": "Final-POC.Web\\Services\\ApiServices\\ApiServices.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAuwD0AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T10:20:35.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "Final-POC.Web\\Controllers\\TaskController.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "Final-POC.Web\\Controllers\\TaskController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T10:19:27.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Final-POC.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Final-POC.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T10:18:19.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "users.js",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\wwwroot\\js\\users.js",
+              "RelativeDocumentMoniker": "Final-POC.Web\\wwwroot\\js\\users.js",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\wwwroot\\js\\users.js",
+              "RelativeToolTip": "Final-POC.Web\\wwwroot\\js\\users.js",
+              "ViewState": "AgIAAGcBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-13T11:57:52.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Final-POC.Web\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Final-POC.Web\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-13T11:57:47.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\wwwroot\\js\\script.js",
+              "RelativeDocumentMoniker": "Final-POC.Web\\wwwroot\\js\\script.js",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\wwwroot\\js\\script.js",
+              "RelativeToolTip": "Final-POC.Web\\wwwroot\\js\\script.js",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-13T11:57:40.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "Final-POC.Web\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "Final-POC.Web\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T11:57:24.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\DTOs\\LoginUserDto.cs",
+              "RelativeDocumentMoniker": "Final-POC.Core\\DTOs\\LoginUserDto.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\DTOs\\LoginUserDto.cs",
+              "RelativeToolTip": "Final-POC.Core\\DTOs\\LoginUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T11:57:06.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthServices.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Services\\AuthServices\\AuthServices.cs",
+              "RelativeDocumentMoniker": "Final-POC.Web\\Services\\AuthServices\\AuthServices.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Services\\AuthServices\\AuthServices.cs",
+              "RelativeToolTip": "Final-POC.Web\\Services\\AuthServices\\AuthServices.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T11:56:59.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Final-POC.Web\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Final-POC.Web\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T11:56:45.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final-POC.Web\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "Final-POC.Web\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T11:56:14.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "tasks.js",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\wwwroot\\js\\tasks.js",
+              "RelativeDocumentMoniker": "Final-POC.Web\\wwwroot\\js\\tasks.js",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Web\\wwwroot\\js\\tasks.js",
+              "RelativeToolTip": "Final-POC.Web\\wwwroot\\js\\tasks.js",
+              "ViewState": "AgIAANkAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-13T11:55:43.323Z"
             }
           ]
         }

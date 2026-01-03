@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj": {}
+    "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj": {
+    "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj",
+        "projectUniqueName": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj",
         "projectName": "Final-POC.Core",
-        "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj",
+        "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj",
         "packagesPath": "C:\\Users\\KathanThakkar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\obj\\",
+        "outputPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

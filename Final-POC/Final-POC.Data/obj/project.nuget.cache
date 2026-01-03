@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DznANUb6MlI=",
+  "dgSpecHash": "jV0Hxo6t5Mw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj",
+  "projectFilePath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KathanThakkar\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\KathanThakkar\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

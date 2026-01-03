@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4dzDCfuNRiw=",
+  "dgSpecHash": "FJ4wIT6+Zjk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.API\\Final-POC.API.csproj",
+  "projectFilePath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.API\\Final-POC.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KathanThakkar\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\KathanThakkar\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

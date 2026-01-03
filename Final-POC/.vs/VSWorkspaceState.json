@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Final-POC.Core",
+    "\\Final-POC.Core\\DTOs",
+    "\\Final-POC.Web",
+    "\\Final-POC.Web\\Controllers",
+    "\\Final-POC.Web\\Services",
+    "\\Final-POC.Web\\Services\\AuthServices",
+    "\\Final-POC.Web\\Views",
+    "\\Final-POC.Web\\Views\\Auth",
+    "\\Final-POC.Web\\wwwroot",
+    "\\Final-POC.Web\\wwwroot\\js"
+  ],
+  "SelectedNode": "\\Final-POC.sln",
+  "PreviewInSolutionExplorer": false
+}

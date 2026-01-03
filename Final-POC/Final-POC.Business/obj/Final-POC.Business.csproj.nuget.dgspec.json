@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj": {}
+    "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj": {
+    "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj",
+        "projectUniqueName": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj",
         "projectName": "Final-POC.Business",
-        "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj",
+        "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Business\\Final-POC.Business.csproj",
         "packagesPath": "C:\\Users\\KathanThakkar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Business\\obj\\",
+        "outputPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj": {
-                "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj"
+              "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj": {
+                "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj"
               },
-              "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj": {
-                "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj"
+              "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj": {
+                "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj"
               }
             }
           }
@@ -51,7 +51,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -90,18 +90,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj": {
+    "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj",
+        "projectUniqueName": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj",
         "projectName": "Final-POC.Core",
-        "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj",
+        "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\Final-POC.Core.csproj",
         "packagesPath": "C:\\Users\\KathanThakkar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Core\\obj\\",
+        "outputPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -134,7 +134,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -155,18 +155,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj": {
+    "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj",
+        "projectUniqueName": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj",
         "projectName": "Final-POC.Data",
-        "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj",
+        "projectPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Data\\Final-POC.Data.csproj",
         "packagesPath": "C:\\Users\\KathanThakkar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KathanThakkar\\source\\repos\\Final-POC\\Final-POC.Data\\obj\\",
+        "outputPath": "C:\\Users\\KathanThakkar\\source\\repos\\Dotnet-Practice-Projects\\Final-POC\\Final-POC.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -199,7 +199,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -236,7 +236,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
