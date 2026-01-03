@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F3F14356-C920-4054-993D-5C318E1E0641}|MCP-POC\\MCP-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mcp-poc\\mcp-poc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F14356-C920-4054-993D-5C318E1E0641}|MCP-POC\\MCP-POC.csproj|solutionrelative:mcp-poc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3F14356-C920-4054-993D-5C318E1E0641}|MCP-POC\\MCP-POC.csproj|c:\\users\\kathanthakkar\\source\\repos\\mcp-poc\\mcp-poc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F14356-C920-4054-993D-5C318E1E0641}|MCP-POC\\MCP-POC.csproj|solutionrelative:mcp-poc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94A659F0-A1FE-418A-BBA8-BC1AD81F7EAE}|MCP-POC.Business\\MCP-POC.Business.csproj|c:\\users\\kathanthakkar\\source\\repos\\mcp-poc\\mcp-poc.business\\mcp\\mcpmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94A659F0-A1FE-418A-BBA8-BC1AD81F7EAE}|MCP-POC.Business\\MCP-POC.Business.csproj|solutionrelative:mcp-poc.business\\mcp\\mcpmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3699CA3B-8A92-49ED-88AE-B572A4D4C2A0}|MCP-POC.Core\\MCP-POC.Core.csproj|c:\\users\\kathanthakkar\\source\\repos\\mcp-poc\\mcp-poc.core\\mcp\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3699CA3B-8A92-49ED-88AE-B572A4D4C2A0}|MCP-POC.Core\\MCP-POC.Core.csproj|solutionrelative:mcp-poc.core\\mcp\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3699CA3B-8A92-49ED-88AE-B572A4D4C2A0}|MCP-POC.Core\\MCP-POC.Core.csproj|c:\\users\\kathanthakkar\\source\\repos\\mcp-poc\\mcp-poc.core\\mcp\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3699CA3B-8A92-49ED-88AE-B572A4D4C2A0}|MCP-POC.Core\\MCP-POC.Core.csproj|solutionrelative:mcp-poc.core\\mcp\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94A659F0-A1FE-418A-BBA8-BC1AD81F7EAE}|MCP-POC.Business\\MCP-POC.Business.csproj|c:\\users\\kathanthakkar\\source\\repos\\mcp-poc\\mcp-poc.business\\mcp\\imcpmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94A659F0-A1FE-418A-BBA8-BC1AD81F7EAE}|MCP-POC.Business\\MCP-POC.Business.csproj|solutionrelative:mcp-poc.business\\mcp\\imcpmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 233,
+          "SelectedChildIndex": 20,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:148:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:150:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:149:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:151:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:152:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MCP-POC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MCP-POC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T13:08:07.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IMcpManager.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC.Business\\MCP\\IMcpManager.cs",
+              "RelativeDocumentMoniker": "MCP-POC.Business\\MCP\\IMcpManager.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC.Business\\MCP\\IMcpManager.cs",
+              "RelativeToolTip": "MCP-POC.Business\\MCP\\IMcpManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:30:09.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "McpManager.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC.Business\\MCP\\McpManager.cs",
+              "RelativeDocumentMoniker": "MCP-POC.Business\\MCP\\McpManager.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC.Business\\MCP\\McpManager.cs",
+              "RelativeToolTip": "MCP-POC.Business\\MCP\\McpManager.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwCYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:29:54.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC.Core\\MCP\\Response.cs",
+              "RelativeDocumentMoniker": "MCP-POC.Core\\MCP\\Response.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC.Core\\MCP\\Response.cs",
+              "RelativeToolTip": "MCP-POC.Core\\MCP\\Response.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:28:27.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Request.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC.Core\\MCP\\Request.cs",
+              "RelativeDocumentMoniker": "MCP-POC.Core\\MCP\\Request.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC.Core\\MCP\\Request.cs",
+              "RelativeToolTip": "MCP-POC.Core\\MCP\\Request.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:28:02.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC\\Program.cs",
+              "RelativeDocumentMoniker": "MCP-POC\\Program.cs",
+              "ToolTip": "C:\\Users\\KathanThakkar\\source\\repos\\MCP-POC\\MCP-POC\\Program.cs",
+              "RelativeToolTip": "MCP-POC\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:27:30.537Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

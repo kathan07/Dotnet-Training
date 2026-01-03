@@ -1,0 +1,7 @@
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC\obj\Debug\net8.0\MCP-POC.csproj.AssemblyReference.cache
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC\obj\Debug\net8.0\MCP-POC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC\obj\Debug\net8.0\MCP-POC.AssemblyInfoInputs.cache
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC\obj\Debug\net8.0\MCP-POC.AssemblyInfo.cs
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC\obj\Debug\net8.0\MCP-POC.csproj.CoreCompileInputs.cache
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC\obj\Debug\net8.0\MCP-POC.MvcApplicationPartsAssemblyInfo.cache

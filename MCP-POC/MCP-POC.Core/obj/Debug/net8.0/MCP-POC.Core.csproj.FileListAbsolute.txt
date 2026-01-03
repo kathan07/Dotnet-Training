@@ -1,0 +1,4 @@
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC.Core\obj\Debug\net8.0\MCP-POC.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC.Core\obj\Debug\net8.0\MCP-POC.Core.AssemblyInfoInputs.cache
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC.Core\obj\Debug\net8.0\MCP-POC.Core.AssemblyInfo.cs
+C:\Users\KathanThakkar\source\repos\MCP-POC\MCP-POC.Core\obj\Debug\net8.0\MCP-POC.Core.csproj.CoreCompileInputs.cache
